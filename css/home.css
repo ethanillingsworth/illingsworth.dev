@@ -1,0 +1,35 @@
+.splash {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: calc(100vh - 80px);
+    place-content: center;
+    text-align: center;
+    place-items: center;
+    background-image: url("../img/splash/js.png");
+    background-size: cover;
+    filter: blur(5px);
+}
+
+.splashText {
+    position: relative;
+    margin: auto;
+    margin-bottom: 0;
+    font-size: 4em;
+
+}
+
+.wrapper {
+    position: relative;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+}
+
+.wrapper h3 {
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+}
