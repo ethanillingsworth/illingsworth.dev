@@ -1,15 +1,5 @@
 const content = $("#content")
 
-
-const splash = $("<div/>").addClass("splash row")
-
-const splashText = $("<h2/>").text("Welcome to illingsworth.dev").addClass("splashText")
-const wrapper = $("<div/>").addClass("wrapper")
-
-const t = $("<h3/>").text("Where dark mode reigns supreme.").addClass("splashTextSmall typewriter")
-
-wrapper.append(t)
-
 const blurbs = [
     "Where dark mode reigns supreme.",
     "The home for all internet things.",
@@ -26,7 +16,7 @@ const blurbs = [
     "👀",
     "ML hurts me.",
     "Your IP Address is: 2113.4141.4242.1331 get hacked.",
-    "Light mode is'nt welcome here.",
+    "Light mode isn't welcome here.",
     "Powered by Firebase.",
     "I <3 Lokal.",
     // "If you know the enemy and know yourself, you need not fear the reasult of 100 battles - Sun Zu (The Art of War)"
@@ -38,15 +28,12 @@ const blurbs = [
     "100% plastic free.",
     "Features sold separately.",
     "It's better than butter.",
-    "200% serious."
+    "200% serious.",
+    "It's not a bug it's a feature!"
 ]
 
 const ran = Math.floor(Math.random() * blurbs.length)
 
-t.text(blurbs[ran])
+$(".splashText").text("Welcome to illingsworth.dev")
 
-
-content.append(splash)
-
-content.append(splashText)
-content.append(wrapper)
+$(".splashTextSmall").text(blurbs[ran])
