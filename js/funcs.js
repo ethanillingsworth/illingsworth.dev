@@ -28,3 +28,33 @@ export class NavBar {
         }
     }
 }
+
+export class Project {
+    constructor() {
+
+    }
+
+    display(content = $("#content")) {
+
+
+        const project = $("<div/>").addClass("project col")
+
+        const n = $("<h2/>").text("Lokal")
+        const desc = $("<p/>").text("A project to simplify the event hosting process for clubs and organizations alike.")
+
+
+        const progressHead = $("<h3/>").text("v10 Completion: 37.4%")
+        const progressBar = $("<progress/>").attr("value", "37.4").attr("max", "100")
+
+        project.append(n)
+        project.append(desc)
+        project.append(progressHead)
+        project.append(progressBar)
+
+        content.append(project)
+    }
+}
+
+export function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

@@ -26,10 +26,23 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     margin: 0;
 }
 
+
+h2 {
+    font-size: 2em
+}
+
+h3 {
+    font-size: 1.5em
+}
+
+p {
+    font-size: 1.25em
+}
 
 #heading {
     margin-right: 50px;
@@ -90,6 +103,7 @@ a {
 #content {
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 .item:hover {
@@ -111,6 +125,7 @@ a {
     place-items: center;
     background-image: url("../img/splash/js.png");
     background-size: cover;
+    background-position: center;
     filter: blur(5px);
 }
 
@@ -149,6 +164,35 @@ a {
     animation:
         typing 1.5s steps(120, end),
         blink-caret .75s step-end infinite;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    border-radius: 15px;
+    padding: 20px;
+    animation: fadein 3s;
+    border: 4px solid transparent
+}
+
+.project:hover {
+    border-color: var(--accent);
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* The typing effect */
