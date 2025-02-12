@@ -24,6 +24,7 @@ const blurbs = [
     "🐧",
     "Brick not included.",
     "Now in HD.",
+    "Diet Coke enjoyers only.",
     "The best thing since sliced bread.",
     "100% plastic free.",
     "Features sold separately.",

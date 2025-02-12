@@ -1,0 +1,8 @@
+.row {
+    width: 100%;
+    place-content: center;
+}
+
+button {
+    width: 100%;
+}

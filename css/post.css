@@ -1,0 +1,36 @@
+#adminBar {
+    background-color: var(--accent);
+    border-radius: 15px;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+}
+
+#postContent {
+    width: 100%;
+}
+
+
+#wrapper {
+    place-items: start;
+}
+
+.tool {
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.tool img {
+    width: 25px;
+    height: 25px;
+}
+
+.tool:hover {
+    background-color: var(--accent2);
+    cursor: pointer;
+}
+
+#postContent h1 {
+    font-size: 2.5em;
+}

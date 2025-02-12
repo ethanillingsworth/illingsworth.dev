@@ -8,6 +8,13 @@ $(".splashTextSmall").text("See my progress below...")
 
 const grid = $("<div/>").addClass("grid")
 content.append(grid)
-new Project().display(grid)
-await sleep(1000)
-new Project().display(grid)
+
+const projects = await Project.getAllProjects()
+
+projects.forEach(async p => {
+    const project = new Project(p.id)
+
+    await project.display(grid)
+
+    await sleep(1000)
+});
