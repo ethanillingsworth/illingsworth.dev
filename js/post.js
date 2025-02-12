@@ -80,37 +80,39 @@ refreshPostContent()
 
 wrapper.append(postContent)
 
-const adminBar = $("<div/>").addClass("col").attr("id", "adminBar")
+if (admin) {
 
-function addElement(type, options) {
-    if (type == "P") {
-        elements.push({ type: type, text: options.text })
+    const adminBar = $("<div/>").addClass("col").attr("id", "adminBar")
+
+    function addElement(type, options) {
+        if (type == "P") {
+            elements.push({ type: type, text: options.text })
+        }
+        refreshPostContent()
     }
-    refreshPostContent()
-}
 
-function addItem(name, icon, onclick) {
-    const item = $("<div/>").addClass("tool row")
+    function addItem(name, icon, onclick) {
+        const item = $("<div/>").addClass("tool row")
 
-    const img = $("<img/>").attr("src", icon)
-    const head = $("<h3/>").text(name)
+        const img = $("<img/>").attr("src", icon)
+        const head = $("<h3/>").text(name)
 
-    item.on("click", () => {
-        onclick()
+        item.on("click", () => {
+            onclick()
+        })
+
+        item.append(img).append(head)
+
+        adminBar.append(item)
+        return item
+    }
+
+    addItem("Paragraph", "../icons/p.png", () => {
+        addElement("P", { text: "This is some placeholder text" })
     })
 
-    item.append(img).append(head)
-
-    adminBar.append(item)
-    return item
+    wrapper.append(adminBar)
 }
-
-addItem("Paragraph", "../icons/p.png", () => {
-    addElement("P", { text: "This is some placeholder text" })
-})
-
-wrapper.append(adminBar)
-
 
 content.append(wrapper)
 

@@ -2,7 +2,7 @@
     background-color: var(--accent);
     border-radius: 15px;
     position: sticky;
-    top: 0;
+    top: 100px;
     padding: 5px;
 }
 
