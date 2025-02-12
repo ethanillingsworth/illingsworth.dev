@@ -4,6 +4,7 @@
     position: sticky;
     top: 100px;
     padding: 5px;
+    gap: 5px
 }
 
 #postContent {
@@ -18,12 +19,17 @@
 .tool {
     padding: 10px;
     border-radius: 15px;
-    width: fit-content;
+    width: calc(100% - 20px);
+    place-content: center;
 }
 
 .tool img {
     width: 25px;
     height: 25px;
+}
+
+.tool h3 {
+    width: 100%;
 }
 
 .tool:hover {
@@ -33,4 +39,8 @@
 
 #postContent h1 {
     font-size: 2.5em;
+}
+
+#postContent h2 {
+    margin-top: 75px;
 }

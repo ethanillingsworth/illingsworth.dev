@@ -21,13 +21,14 @@ const post = new Post(id)
 
 const content = $("#content")
 
-$(".splashText").text("")
+$(".splashText").text("illingsworth.dev")
 
 $(".splashTextSmall").text("")
 
 const data = await post.getData()
 
-$(".splashText").text("Scroll down...")
+$(".splashTextSmall").text(data.name)
+
 
 const wrapper = $("<div/>").addClass("row").attr("id", "wrapper")
 
@@ -51,17 +52,28 @@ function refreshPostContent() {
     postContent.append($("<hr/>"))
 
     elements.forEach((element) => {
+        let e = null
         if (element.type == "P") {
-            const e = $("<p/>").html(element.text)
-            if (admin) {
-                e.attr("contenteditable", true)
-                e.on("keyup", () => {
-                    element.text = e.html();
-                })
-            }
-
-            postContent.append(e)
+            e = $("<p/>").html(element.text)
         }
+        else if (element.type == "H2") {
+            e = $("<h2/>").text(element.text)
+        }
+
+        if (admin) {
+            e.attr("contenteditable", true)
+            e.on("keyup", () => {
+                element.text = e.html();
+            })
+        }
+
+        postContent.append(e)
+
+        if (element.type == "H2") {
+            postContent.append($("<hr/>"))
+        }
+
+
     })
 
     if (admin) {
@@ -85,9 +97,10 @@ if (admin) {
     const adminBar = $("<div/>").addClass("col").attr("id", "adminBar")
 
     function addElement(type, options) {
-        if (type == "P") {
+        if (type == "P" || type == "H2") {
             elements.push({ type: type, text: options.text })
         }
+
         refreshPostContent()
     }
 
@@ -109,6 +122,10 @@ if (admin) {
 
     addItem("Paragraph", "../icons/p.png", () => {
         addElement("P", { text: "This is some placeholder text" })
+    })
+
+    addItem("Heading", "../icons/h2.png", () => {
+        addElement("H2", { text: "HEADING HERE" })
     })
 
     wrapper.append(adminBar)
