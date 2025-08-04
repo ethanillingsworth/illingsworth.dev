@@ -1,0 +1,17 @@
+{
+    "syntaxforge": {
+        "featured": true,
+        "title": "SyntaxForge",
+        "desc": "SyntaxForge helps beginners and advanced coders master programming skills at their own pace.",
+        "github": "https://github.com/ethanillingsworth/SyntaxForge",
+        "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Tailwind CSS",
+            "jQuery",
+            "Webpack",
+            "Firebase"
+        ]
+    }
+}

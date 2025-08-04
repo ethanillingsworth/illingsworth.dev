@@ -113,5 +113,9 @@
         @apply hover:text-forge-accent transition-colors
     }
 
+    .project img {
+        @apply w-full aspect-video
+    }
+
     
 }

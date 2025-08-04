@@ -59,6 +59,10 @@ export default {
                 {
                     from: 'src/icons', // where you put the _redirects file
                     to: 'icons',                 // output it at the root of /public
+                },
+                {
+                    from: 'src/data', // where you put the _redirects file
+                    to: 'data',                 // output it at the root of /public
                 }
             ]
         }),
