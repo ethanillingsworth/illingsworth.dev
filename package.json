@@ -1,0 +1,35 @@
+{
+  "name": "illingsworth.dev",
+  "version": "1.0.0",
+  "description": "A home for all my projects, posts, info, and everything else.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanillingsworth/illingsworth.dev.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ethanillingsworth/illingsworth.dev/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/ethanillingsworth/illingsworth.dev#readme",
+  "dependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss-loader": "^8.1.1",
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
