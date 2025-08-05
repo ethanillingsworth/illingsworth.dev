@@ -1,5 +1,5 @@
 import $ from "jquery"
-
+import "../css/tailwind.css"
 export class JSON {
     /**
     * Load a JSON file
@@ -21,12 +21,13 @@ export class Tag {
             "jQuery": "text-purple-400 bg-purple-500/50",
             "Webpack": "text-gray-400 bg-gray-500/50",
             "Firebase": "text-rose-400 bg-rose-500/50",
-            "Python": "text-sky-400 bg-sky-500/50",              // Python blue
-            "Java": "text-red-400 bg-red-500/50",                // Java red logo
-            "Swift": "text-orange-300 bg-orange-400/50",         // Swift's orange palette
-            "Python Packaging (Poetry)": "text-emerald-400 bg-emerald-500/50", // calm green
-            "SwiftUI": "text-indigo-300 bg-indigo-500/50",       // SwiftUI blue-purple
-            "React": "text-teal-300 bg-teal-500/50"              // React cyan-teal tones
+            "Python": "text-sky-400 bg-sky-500/50",              
+            "Java": "text-red-400 bg-red-500/50",                
+            "Swift": "text-orange-300 bg-orange-400/50",         
+            "Python Packaging (Poetry)": "text-emerald-400 bg-emerald-500/50", 
+            "SwiftUI": "text-indigo-300 bg-indigo-500/50",       
+            "React": "text-teal-300 bg-teal-500/50",
+            "JSON": "text-amber-400 bg-amber-500/50"
         };
 
     static getElement(tag) {
@@ -45,19 +46,35 @@ export class Project {
         return projects[this.id]
     }
 
-    display(parent) {
+    static getAll() {
+        return Object.entries(projects)
+            .sort(([_, a], [__, b]) => {
+                return (b.featured === true) - (a.featured === true);
+            })
+            .map(([key, _]) => new Project(key));
+    }
+
+    display(parent, vertical=true) {
         const data = this.get()
 
         const content = $("<div/>")
-            .addClass("flex flex-col md:flex-row gap-6 items-start h-full");
+            .addClass("flex flex-col gap-6 items-start h-full");
 
         const image = $("<img/>")
             .attr("src", `/imgs/previews/${this.id}.png`)
-            .addClass("w-full md:w-1/3 object-cover");
+            .addClass("w-full object-cover");
+
+        if (!vertical) {
+            content.addClass("md:flex-row")
+            image.addClass("md:w-1/3")
+        }
 
         const textContent = $("<div/>").addClass("flex flex-col gap-2 w-full h-full");
 
         const title = $("<h3/>").text(data.title);
+
+        const star = $("<img/>").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto")
+
         const desc = $("<p/>").text(data.desc);
 
         const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap");
@@ -75,12 +92,18 @@ export class Project {
                     <img class="icon" src="/icons/web.svg">
                     <span>Website</span>
                 </a>`)
+        const bottom = $("<div/>").addClass("flex flex-row gap-3 mt-auto pt-4 place-items-end")
 
-        const buttons = $("<div/>").addClass("flex flex-row ml-auto gap-3 text-base mt-auto");
+        const buttons = $("<div/>").addClass("flex flex-row ml-auto gap-3 text-base");
         if (data.github) buttons.append(githubButton);
         if (data.web) buttons.append(webButton);
+        
+        if (data.featured) {
+            bottom.append(star)
+        }
+        bottom.append(buttons)
 
-        textContent.append(title, desc, tags, buttons);
+        textContent.append(title, desc, tags, bottom);
         content.append(image, textContent);
 
         const card = $("<div/>").addClass("card project").attr("id", this.id);

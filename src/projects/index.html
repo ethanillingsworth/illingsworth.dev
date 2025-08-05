@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Illingsworth | My Projects</title>
+    <meta name="description"
+        content="Explore a collection of my projects—from web apps and open-source tools to experiments with modern frameworks. Check out the code on GitHub and learn more!">
+
+
+</head>
+
+<body>
+    <!-- NAV -->
+    <header class="nav">
+        <a href="/">illingsworth.dev</a>
+        <hr class="vertical border-forge-accent" />
+        <a href="#projects">The Projects</a>
+        <div class="flex flex-row ml-auto gap-6">
+            <a href="/">Home</a>
+            <a href="/blog">Blog</a>
+            <a href="/projects">Projects</a>
+            <a href="/services">Services</a>
+        </div>
+    </header>
+
+    <div class="content">
+
+        <!-- HERO -->
+
+        <div class="hero">
+            <img class="w-50 border-4 border-forge-surface" src="/imgs/profile.jpeg">
+            <h1 class="text-4xl">My Projects</h1>
+            <h2 class="text-forge-subtext text-xl">Here you can find all my projects, most of which are open source</h2>
+            <div class="flex-row flex gap-3 text-base">
+                <a class="badge bg-black" href="https://github.com/ethanillingsworth?tab=repositories" target="_blank">
+                    <img class="icon" src="icons/github.svg">
+                    <span>Github</span>
+                </a>
+            </div>
+        </div>
+
+        <section id="projects">
+            <h2 class="text-3xl">The Projects</h2>
+            <hr />
+            <section id="active" class="pt-4">
+                <h3 class="text-2xl">Active</h3>
+                <hr />
+                <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6" id="projects-row"></div>
+            </section>
+            <section id="archived" class="pt-4">
+                <h3 class="text-2xl">Archived</h3>
+                <hr />
+                <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6" id="archive-row"></div>
+            </section>
+        </section>
+
+        
+
+            
+    </div>
+</body>
+
+</html>

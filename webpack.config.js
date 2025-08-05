@@ -10,7 +10,8 @@ const __dirname = path.dirname(__filename);
 
 export default {
     entry: {
-        "home": "./src/js/home.js"
+        "home": "./src/js/home.js",
+        "projects": "./src/js/projects.js"
     },
     mode: 'development',
     output: {
@@ -71,6 +72,12 @@ export default {
             template: "./src/index.html",
             filename: "index.html",
             chunks: ['home'],
+            favicon: './src/imgs/logo.png'
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/projects/index.html",
+            filename: "projects/index.html",
+            chunks: ['projects'],
             favicon: './src/imgs/logo.png'
         })
     ]
