@@ -6,4 +6,4 @@ import { Project } from "./main.js"
 
 const featuredProject = Project.getFeatured()
 
-featuredProject.display($("#featured-project-row"))
+featuredProject.display($("#featured-project"))

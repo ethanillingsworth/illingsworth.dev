@@ -48,11 +48,23 @@ export class Project {
     display(parent) {
         const data = this.get()
 
-        const card = $("<div/>").addClass("card project").attr("id", this.id)
+        const content = $("<div/>")
+            .addClass("flex flex-col md:flex-row gap-6 items-start h-full");
 
-        const image = $("<img/>").attr("src", `/imgs/previews/${this.id}.png`)
+        const image = $("<img/>")
+            .attr("src", `/imgs/previews/${this.id}.png`)
+            .addClass("w-full md:w-1/3 object-cover");
 
-        const buttons = $("<div/>").addClass("flex flex-row ml-auto gap-3 text-base")
+        const textContent = $("<div/>").addClass("flex flex-col gap-2 w-full h-full");
+
+        const title = $("<h3/>").text(data.title);
+        const desc = $("<p/>").text(data.desc);
+
+        const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap");
+        data.tags.sort();
+        for (const tag of data.tags) {
+            tags.append(Tag.getElement(tag));
+        }
 
         const githubButton = $(`<a class="badge bg-black" href="${data.github}" target="_blank">
                     <img class="icon" src="/icons/github.svg">
@@ -60,28 +72,19 @@ export class Project {
                 </a>`)
         
         const webButton = $(`<a class="badge bg-blue-500" href="${data.web}" target="_blank">
-            <img class="icon" src="/icons/web.svg">
-            <span>Website</span>
-        </a>`)
+                    <img class="icon" src="/icons/web.svg">
+                    <span>Website</span>
+                </a>`)
 
-        const title = $("<h3/>").text(data.title)
+        const buttons = $("<div/>").addClass("flex flex-row ml-auto gap-3 text-base mt-auto");
+        if (data.github) buttons.append(githubButton);
+        if (data.web) buttons.append(webButton);
 
-        if (data.github) {
-            buttons.append(githubButton)
-        }
+        textContent.append(title, desc, tags, buttons);
+        content.append(image, textContent);
 
-        if (data.web) {
-            buttons.append(webButton)
-        }
-
-        const desc = $("<p/>").text(data.desc)
-
-        const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap")
-        data.tags.sort()
-        for (const tag of data.tags) {
-            tags.append(Tag.getElement(tag))
-        }
-        card.append(image, title, desc, tags, buttons)
+        const card = $("<div/>").addClass("card project").attr("id", this.id);
+        card.append(content);
 
         parent.append(card)
 
