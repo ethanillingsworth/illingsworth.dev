@@ -63,6 +63,7 @@
         <section id="featured-project">
             <h2>Featured Project</h2>
             <hr class="mb-4" />
+            <div id="featured-project-row" class="grid grid-cols-3 grid-flow-row pt-4 gap-6"></div>
         </section>
 
         <section id="featured-blog-post">
@@ -83,7 +84,7 @@
                 <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
                     <div class="card">
                         <h4>HTML5 <span class="float-right font-normal text-base">90%</span></h4>
-                        <progress value="90" max="100"></progress>
+                        <progress value="90" max="100" class="text-orange-500/75"></progress>
                         <h5>Experience:<span class="float-right">4+ years</span></h5>
                         <p>The foundation of every project I build. I write clean, semantic markup for structure and accessibility.</p>
                         <div class="flex flex-row gap-3">
@@ -92,7 +93,7 @@
                     </div>
                     <div class="card">
                         <h4>JavaScript <span class="float-right font-normal text-base">85%</span></h4>
-                        <progress value="85" max="100"></progress>
+                        <progress value="85" max="100" class="text-yellow-500/75"></progress>
                         <h5>Experience:<span class="float-right">4+ years</span></h5>
                         <p>A core language for web development. I use it daily to build dynamic UIs and browser logic.</p>
                         <div class="flex flex-row gap-3">
@@ -102,7 +103,7 @@
                     </div>
                     <div class="card">
                         <h4>CSS3 <span class="float-right font-normal text-base">80%</span></h4>
-                        <progress value="80" max="100"></progress>
+                        <progress value="80" max="100" class="text-blue-500/75"></progress>
                         <h5>Experience:<span class="float-right">4+ years</span></h5>
                         <p>Styling layouts with utility-first approaches like Tailwind and custom styles when needed.</p>
                         <div class="flex flex-row gap-3">
@@ -112,7 +113,7 @@
 
                     <div class="card">
                         <h4>Python <span class="float-right font-normal text-base">75%</span></h4>
-                        <progress value="75" max="100"></progress>
+                        <progress value="75" max="100" class="text-sky-500/75"></progress>
                         <h5>Experience:<span class="float-right">3+ years</span></h5>
                         <p>Used for scripting, automation, and packaging tools like JSave. I also use it for backend logic.</p>
                         <div class="flex flex-row gap-3">
@@ -122,7 +123,7 @@
 
                     <div class="card">
                         <h4>Java <span class="float-right font-normal text-base">40%</span></h4>
-                        <progress value="40" max="100"></progress>
+                        <progress value="40" max="100" class="text-red-500/75"></progress>
                         <h5>Experience:<span class="float-right">1 year</span></h5>
                         <p>Mostly used in academic environments or for learning purposes. Basic understanding of OOP and syntax.</p>
                         <div class="flex flex-row gap-3">
@@ -132,7 +133,7 @@
 
                     <div class="card">
                         <h4>Swift <span class="float-right font-normal text-base">30%</span></h4>
-                        <progress value="30" max="100"></progress>
+                        <progress value="30" max="100" class="text-orange-400/75"></progress>
                         <h5>Experience:<span class="float-right">< 1 year</span></h5>
                         <p>Some exposure from experimenting with iOS development. Still early in the learning phase.</p>
                         <div class="flex flex-row gap-3">
@@ -150,7 +151,7 @@
                 <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
                     <div class="card">
                         <h4>Tailwind CSS <span class="float-right font-normal text-base">85%</span></h4>
-                        <progress value="85" max="100"></progress>
+                        <progress value="85" max="100" class="text-cyan-500/75"></progress>
                         <h5>Experience:<span class="float-right">3+ years</span></h5>
                         <p>Utility-first CSS framework I use to build responsive, maintainable styles quickly.</p>
                         <div class="flex flex-row gap-3">
@@ -159,7 +160,7 @@
                     </div>
                     <div class="card">
                         <h4>jQuery <span class="float-right font-normal text-base">80%</span></h4>
-                        <progress value="80" max="100"></progress>
+                        <progress value="80" max="100" class="text-purple-500/75"></progress>
                         <h5>Experience:<span class="float-right">4+ years</span></h5>
                         <p>Classic JS library for DOM manipulation and UI effects, integrated into several projects.</p>
                         <div class="flex flex-row gap-3">
@@ -168,7 +169,7 @@
                     </div>
                     <div class="card">
                         <h4>Webpack <span class="float-right font-normal text-base">70%</span></h4>
-                        <progress value="70" max="100"></progress>
+                        <progress value="70" max="100" class="text-gray-500/75"></progress>
                         <h5>Experience:<span class="float-right">2+ years</span></h5>
                         <p>Module bundler and build tool, used to optimize assets and streamline frontend workflows.</p>
                         <div class="flex flex-row gap-3">
@@ -177,7 +178,7 @@
                     </div>
                     <div class="card">
                         <h4>Firebase <span class="float-right font-normal text-base">65%</span></h4>
-                        <progress value="65" max="100"></progress>
+                        <progress value="65" max="100" class="text-rose-500/75"></progress>
                         <h5>Experience:<span class="float-right">1+ years</span></h5>
                         <p>Backend-as-a-service platform for realtime data, authentication, and hosting.</p>
                         <div class="flex flex-row gap-3">
@@ -186,7 +187,7 @@
                     </div>
                     <div class="card">
                         <h4>Python Packaging (Poetry) <span class="float-right font-normal text-base">60%</span></h4>
-                        <progress value="60" max="100"></progress>
+                        <progress value="60" max="100" class="text-emerald-500/75"></progress>
                         <h5>Experience:<span class="float-right">2+ years</span></h5>
                         <p>Dependency management and packaging tool for Python projects, improving workflow and publishing.</p>
                         <div class="flex flex-row gap-3">
@@ -195,7 +196,7 @@
                     </div>
                     <div class="card">
                         <h4>SwiftUI <span class="float-right font-normal text-base">30%</span></h4>
-                        <progress value="30" max="100"></progress>
+                        <progress value="30" max="100" class="text-indigo-500/75"></progress>
                         <h5>Experience:<span class="float-right">< 1 year</span></h5>
                         <p>Declarative UI framework for building iOS apps, currently exploring and learning.</p>
                         <div class="flex flex-row gap-3">
@@ -204,7 +205,7 @@
                     </div>
                     <div class="card">
                         <h4>React <span class="float-right font-normal text-base">20%</span></h4>
-                        <progress value="20" max="100"></progress>
+                        <progress value="20" max="100" class="text-teal-500/75"></progress>
                         <h5>Experience:<span class="float-right">< 1 year</span></h5>
                         <p>Component-based UI library for building interactive interfaces and single-page apps.</p>
                         <div class="flex flex-row gap-3">
@@ -221,7 +222,7 @@
                 <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
                     <div class="card">
                         <h4>VS Code <span class="float-right font-normal text-base">85%</span></h4>
-                        <progress value="85" max="100"></progress>
+                        <progress value="85" max="100" class="text-yellow-400/75"></progress>
                         <h5>Experience:<span class="float-right">3+ years</span></h5>
                         <p>My main code editor, fully customized with extensions and shortcuts for efficient development.</p>
                         <div class="flex flex-row gap-3">
@@ -231,7 +232,7 @@
 
                     <div class="card">
                         <h4>Git & GitHub <span class="float-right font-normal text-base">80%</span></h4>
-                        <progress value="80" max="100"></progress>
+                        <progress value="80" max="100" class="text-yellow-400/75"></progress>
                         <h5>Experience:<span class="float-right">4+ years</span></h5>
                         <p>Version control and collaboration platform — used daily for managing projects and codebases.</p>
                         <div class="flex flex-row gap-3">
@@ -241,7 +242,7 @@
 
                     <div class="card">
                         <h4>NPM <span class="float-right font-normal text-base">75%</span></h4>
-                        <progress value="75" max="100"></progress>
+                        <progress value="75" max="100" class="text-yellow-400/75"></progress>
                         <h5>Experience:<span class="float-right">3+ years</span></h5>
                         <p>Package manager for JavaScript, managing dependencies and running scripts seamlessly.</p>
                         <div class="flex flex-row gap-3">
@@ -251,7 +252,7 @@
 
                     <div class="card">
                         <h4>Build Configuration & Project Setup <span class="float-right font-normal text-base">70%</span></h4>
-                        <progress value="70" max="100"></progress>
+                        <progress value="70" max="100" class="text-yellow-400/75"></progress>
                         <h5>Experience:<span class="float-right">3+ years</span></h5>
                         <p>Setting up and optimizing build pipelines, configuring tools like Webpack and scripts.</p>
                         <div class="flex flex-row gap-3">

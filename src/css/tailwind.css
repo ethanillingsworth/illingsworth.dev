@@ -67,7 +67,7 @@
     progress {
         @apply rounded-xl h-2 w-full bg-forge-muted;
         @apply [&::-webkit-progress-bar]:rounded-xl [&::-webkit-progress-value]:rounded-xl [&::-webkit-progress-value]:gradient-bg [&::-webkit-progress-bar]:bg-forge-muted;
-        @apply [&::-moz-progress-bar]:gradient-bg;
+        @apply [&::-moz-progress-bar]:bg-current;
     }
 
 

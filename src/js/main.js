@@ -13,15 +13,22 @@ export class JSON {
 }
 
 export class Tag {
-    static tagColors = {
-        "JavaScript": "text-yellow-400 bg-yellow-500/50",
-        "HTML5": "text-orange-400 bg-orange-500/50",
-        "CSS3": "text-blue-400 bg-blue-500/50",
-        "Tailwind CSS": "text-cyan-400 bg-cyan-500/50",
-        "jQuery": "text-purple-400 bg-purple-500/50",
-        "Webpack": "text-gray-400 bg-gray-500/50",
-        "Firebase": "text-rose-400 bg-rose-500/50"
-    };
+        static tagColors = {
+            "JavaScript": "text-yellow-400 bg-yellow-500/50",
+            "HTML5": "text-orange-400 bg-orange-500/50",
+            "CSS3": "text-blue-400 bg-blue-500/50",
+            "Tailwind CSS": "text-cyan-400 bg-cyan-500/50",
+            "jQuery": "text-purple-400 bg-purple-500/50",
+            "Webpack": "text-gray-400 bg-gray-500/50",
+            "Firebase": "text-rose-400 bg-rose-500/50",
+            "Python": "text-sky-400 bg-sky-500/50",              // Python blue
+            "Java": "text-red-400 bg-red-500/50",                // Java red logo
+            "Swift": "text-orange-300 bg-orange-400/50",         // Swift's orange palette
+            "Python Packaging (Poetry)": "text-emerald-400 bg-emerald-500/50", // calm green
+            "SwiftUI": "text-indigo-300 bg-indigo-500/50",       // SwiftUI blue-purple
+            "React": "text-teal-300 bg-teal-500/50"              // React cyan-teal tones
+        };
+
     static getElement(tag) {
         return $(`<span class="${Tag.tagColors[tag]} tag">${tag}</span>`)
     }
@@ -45,12 +52,17 @@ export class Project {
 
         const image = $("<img/>").attr("src", `/imgs/previews/${this.id}.png`)
 
-        const buttons = $("<div/>").addClass("flex flex-row ml-auto")
+        const buttons = $("<div/>").addClass("flex flex-row ml-auto gap-3 text-base")
 
         const githubButton = $(`<a class="badge bg-black" href="${data.github}" target="_blank">
-                    <img class="icon" src="icons/github.svg">
+                    <img class="icon" src="/icons/github.svg">
                     <span>Github</span>
                 </a>`)
+        
+        const webButton = $(`<a class="badge bg-blue-500" href="${data.web}" target="_blank">
+            <img class="icon" src="/icons/web.svg">
+            <span>Website</span>
+        </a>`)
 
         const title = $("<h3/>").text(data.title)
 
@@ -58,10 +70,14 @@ export class Project {
             buttons.append(githubButton)
         }
 
+        if (data.web) {
+            buttons.append(webButton)
+        }
+
         const desc = $("<p/>").text(data.desc)
 
         const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap")
-
+        data.tags.sort()
         for (const tag of data.tags) {
             tags.append(Tag.getElement(tag))
         }
