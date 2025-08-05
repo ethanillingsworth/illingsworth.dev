@@ -62,5 +62,31 @@
             "Swift",
             "SwiftUI"
         ]
+    },
+    "microgames": {
+        "title": "MicroGames",
+        "desc": "A collection of lightweight mini-games built for quick fun and experimentation.",
+        "github": "https://github.com/ethanillingsworth/MicroGames",
+        "web": "https://microgames.illingsworth.dev/",
+        "archived": true,
+        "tags": [
+            "JavaScript",
+            "CSS3",
+            "HTML5",
+            "jQuery"
+        ]
+    },
+    "react-tac-toe": {
+        "title": "React-Tac-Toe",
+        "desc": "A Tic-Tac-Toe clone made in react, this is my first react project and was used to get my feet off the ground with react.",
+        "github": "https://github.com/ethanillingsworth/react-tac-toe",
+        "web": "https://react-tac-toe.illingsworth.dev/",
+        "archived": true,
+        "tags": [
+            "JavaScript",
+            "CSS3",
+            "HTML5",
+            "React"
+        ]
     }
 }
