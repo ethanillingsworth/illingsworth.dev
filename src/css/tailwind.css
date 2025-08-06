@@ -119,12 +119,21 @@
     .project img {
         @apply w-full aspect-video
     }
+
+    .post p {
+        @apply whitespace-normal
+    }
+
+    .md {
+        @apply !text-white
+    }
+
     .md h1 {
-        @apply text-4xl;
+        @apply text-4xl border-b-2 pb-3 border-forge-accent w-full;
     }
 
     .md h2 {
-        @apply text-3xl;
+        @apply text-3xl border-b-2 pb-3 border-forge-muted w-full;
     }
 
     .md h3 {
@@ -139,8 +148,8 @@
         @apply text-lg;
     }
 
-    .md p {
-        @apply text-lg;
+    .md p, .md ol, .md ul, .md table {
+        @apply text-lg whitespace-normal text-white
     }
 
     .md blockquote {
