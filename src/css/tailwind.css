@@ -181,6 +181,10 @@
         @apply text-forge-accent hover:underline
     }
 
+    p a {
+        @apply text-forge-accent hover:underline
+    }
+
     .md img {
         @apply max-w-64 max-h-64 object-cover rounded-xl inline
     }

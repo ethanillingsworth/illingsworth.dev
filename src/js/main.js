@@ -201,6 +201,6 @@ export class BlogPost {
     }
 
     async getFirstParagraph() {
-        return marked.lexer(await this.getMarkdown()).find(token => token.type === "paragraph").text || "No Paragraph found"
+        return marked.parse(marked.lexer(await this.getMarkdown()).find(token => token.type === "paragraph").text) || "No Paragraph found"
     }
 }
