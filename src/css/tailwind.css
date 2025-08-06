@@ -153,16 +153,13 @@
     }
 
     .md blockquote {
-        @apply bg-forge-surface p-4 rounded-2xl;
+        @apply bg-forge-surface/50 p-4 rounded-2xl;
     }
 
     .md code {
-        @apply rounded-2xl
+        @apply rounded-2xl bg-forge-gold/10 p-1 px-2 text-forge-gold text-wrap
     }
 
-    .md blockquote {
-        @apply bg-forge-surface/50
-    }
 
     .md ul {
         @apply list-disc list-outside pl-6;

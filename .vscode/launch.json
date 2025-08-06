@@ -16,5 +16,11 @@
             "request": "launch",
             "type": "node-terminal"
         },
+        {
+            "command": "npm install; node src/scripts/mkpost.js",
+            "name": "Scripts - Make Post",
+            "request": "launch",
+            "type": "node-terminal"
+        },
     ]
 }

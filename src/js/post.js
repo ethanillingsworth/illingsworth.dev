@@ -4,12 +4,19 @@ import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import html from 'highlight.js/lib/languages/xml'; // `xml` = html/svg/xhtml
 import css from 'highlight.js/lib/languages/css';
+import json from 'highlight.js/lib/languages/json';
+import markdown from 'highlight.js/lib/languages/markdown';
+
 import "highlight.js/styles/atom-one-dark.css"
 
 // Register them with hljs
 hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('json', json);
+
 hljs.registerLanguage('html', html);
 hljs.registerLanguage('css', css);
+hljs.registerLanguage('markdown', markdown);
+
 
 const path = window.location.pathname;
 const segments = path.split('/');
@@ -28,7 +35,4 @@ $('h2').attr('id', function () {
     return $(this).text().toLowerCase().replaceAll(" ", "-");
 });
 
-for (let h2 of await post.getAllH2()) {
-    $("#quick-links").append($("<a/>").text(h2).attr("href", "#" + h2.toLowerCase().replaceAll(" ", "-")))
-}
 

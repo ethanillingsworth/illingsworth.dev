@@ -32,6 +32,7 @@ export class Tag {
             "SwiftUI": "text-indigo-300 bg-indigo-500/50",       
             "React": "text-teal-300 bg-teal-500/50",
             "JSON": "text-amber-400 bg-amber-500/50",
+            "Markdown": "text-gray-700 bg-gray-800/50",
             "Backend": "text-green-400 bg-green-500/50",
             "Frontend": "text-blue-400 bg-blue-500/50",
             "Other": "text-gray-500 bg-gray-600/50"
@@ -164,7 +165,7 @@ export class BlogPost {
         const star = $("<img/>").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto float-end inline")
 
         const heading = $("<h3/>").text(await this.getHeading()).addClass("w-full")
-        const desc = $("<p/>").text(await this.getFirstParagraph()).addClass("line-clamp-5")
+        const desc = $("<p/>").html(await this.getFirstParagraph()).addClass("line-clamp-2")
 
         if (data.featured) {
             heading.append(star)
