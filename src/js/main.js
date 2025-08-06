@@ -158,7 +158,7 @@ export class BlogPost {
         const data = this.get()
 
         const content = $("<a/>")
-            .addClass("flex flex-col gap-1.5 items-start h-full card post")
+            .addClass("flex flex-col gap-1.5 items-start h-full card post mt-4")
             .attr("href", "/post/" + this.id)
 
         const star = $("<img/>").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto float-end inline")
