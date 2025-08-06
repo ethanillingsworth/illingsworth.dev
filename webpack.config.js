@@ -78,6 +78,10 @@ export default {
                 {
                     from: 'src/netlify.toml', // where you put the _redirects file
                     to: 'netlify.toml',                 // output it at the root of /public
+                },
+                {
+                    from: 'src/sitemap.xml', // where you put the _redirects file
+                    to: 'sitemap.xml',                 // output it at the root of /public
                 }
             ]
         }),

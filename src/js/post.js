@@ -20,3 +20,6 @@ const post = new BlogPost(postId)
 
 $(".content").append(await post.getHtml())
 hljs.highlightAll()
+
+$("#title").text("Ethan Illingsworth | " + await post.getHeading())
+$("#desc").text(await post.getFirstParagraph())

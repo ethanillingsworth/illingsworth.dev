@@ -1,3 +1,9 @@
+<!--
+title: "My First Blog Post"
+date: "2025-08-05"
+tags: ["Other"]
+-->
+
 # My First Blog Post
 
 This is a sample blog post with a variety of markdown elements to
