@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import webpack from 'webpack';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -52,6 +53,9 @@ export default {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
+        }),
+        new webpack.IgnorePlugin({
+            resourceRegExp: /^\.\/scripts\//,
         }),
         new CopyWebpackPlugin({
             patterns: [
