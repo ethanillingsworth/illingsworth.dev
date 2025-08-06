@@ -1,8 +1,10 @@
 {
-    "my-first-blog":{
+    "my-first-blog": {
         "date": "2025-08-05",
         "file": "/markdown/my-first-blog.md",
-        "tags": ["Other"],
+        "tags": [
+            "Other"
+        ],
         "featured": true
     }
 }

@@ -1,0 +1,4 @@
+{
+    "MD025": false, // Heading must be at top rule
+    "MD040": false // No blank code blocks
+}

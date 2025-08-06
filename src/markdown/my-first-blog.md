@@ -1,6 +1,7 @@
 # My First Blog Post
 
-This is a sample blog post with a variety of markdown elements to test out the markdown styling
+This is a sample blog post with a variety of markdown elements to
+test out the markdown styling
 
 ## Headings
 
@@ -71,4 +72,5 @@ An image (png, svg):
 With nested
 > Dorothy followed her through many of the beautiful rooms in her castle.
 >
->> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
+>> The Witch bade her clean the pots and kettles and sweep the floor and
+>> keep the fire fed with wood.
