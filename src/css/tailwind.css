@@ -54,6 +54,10 @@
     @apply border-0 border-r-2 w-auto h-full
 }
 
+@utility post {
+    @apply transition-all border-2 border-transparent hover:border-forge-accent hover:scale-105 hover:cursor-pointer
+}
+
 
 @layer base {
     body {

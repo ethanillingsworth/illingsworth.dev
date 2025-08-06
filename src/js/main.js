@@ -1,5 +1,9 @@
 import $ from "jquery"
 import "../css/tailwind.css"
+import { marked } from "marked"
+
+
+
 export class JSON {
     /**
     * Load a JSON file
@@ -27,7 +31,10 @@ export class Tag {
             "Python Packaging (Poetry)": "text-emerald-400 bg-emerald-500/50", 
             "SwiftUI": "text-indigo-300 bg-indigo-500/50",       
             "React": "text-teal-300 bg-teal-500/50",
-            "JSON": "text-amber-400 bg-amber-500/50"
+            "JSON": "text-amber-400 bg-amber-500/50",
+            "Backend": "text-green-400 bg-green-500/50",
+            "Frontend": "text-blue-400 bg-blue-500/50",
+            "Other": "text-gray-500 bg-gray-600/50"
         };
 
     static getElement(tag) {
@@ -36,6 +43,8 @@ export class Tag {
 }
 
 const projects = await JSON.load("/data/projects.json")
+const posts = await JSON.load("/data/blogposts.json")
+
 
 export class Project {
     constructor(id) {
@@ -43,7 +52,7 @@ export class Project {
     }
 
     get() {
-        return projects[this.id]
+        return projects[this.id] || {}
     }
 
     static getAll() {
@@ -122,4 +131,67 @@ export class Project {
     }
 }
 
-console.log(Project.getFeatured())
+export class BlogPost {
+    constructor(id) {
+        this.id = id
+    }
+    
+    get() {
+        return posts[this.id] || {}
+    }
+
+    static getAll() {
+        return Object.entries(posts)
+            .sort(([_, a], [__, b]) => {
+                return (b.featured === true) - (a.featured === true);
+            })
+            .map(([key, _]) => new BlogPost(key));
+    }
+
+    static getFeatured() {
+        return Object.entries(posts)
+            .filter(([_, project]) => project.featured === true)
+            .map(([key, _]) => new BlogPost(key))[0]
+    }
+
+    async display(parent) {
+        const data = this.get()
+
+        const content = $("<a/>")
+            .addClass("flex flex-col gap-1.5 items-start h-full card post")
+            .attr("href", "/post/" + this.id)
+
+        const star = $("<img/>").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto float-end inline")
+
+        const heading = $("<h3/>").text(await this.getHeading()).addClass("w-full")
+        const desc = $("<p/>").text(await this.getFirstParagraph()).addClass("line-clamp-5")
+
+        if (data.featured) {
+            heading.append(star)
+        }
+
+        const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap");
+        data.tags.sort();
+        for (const tag of data.tags) {
+            tags.append(Tag.getElement(tag));
+        }
+        content.append(heading, desc, tags)
+
+        parent.append(content)
+
+        return content
+
+    }
+
+    async getMarkdown() {
+        return await (await fetch(this.get().file)).text() || "# Sorry we couldnt find that content!\n(Go Home)[/]"
+    }
+
+    async getHeading() {
+        return marked.lexer(await this.getMarkdown()).find(token => token.type === "heading" && token.depth === 1).text || "No Heading found"
+    }
+
+    async getFirstParagraph() {
+        return marked.lexer(await this.getMarkdown()).find(token => token.type === "paragraph").text || "No Paragraph found"
+    }
+}

@@ -11,7 +11,8 @@ const __dirname = path.dirname(__filename);
 export default {
     entry: {
         "home": "./src/js/home.js",
-        "projects": "./src/js/projects.js"
+        "projects": "./src/js/projects.js",
+        "blog": "./src/js/blog.js"
     },
     mode: 'development',
     output: {
@@ -64,6 +65,10 @@ export default {
                 {
                     from: 'src/data', // where you put the _redirects file
                     to: 'data',                 // output it at the root of /public
+                },
+                {
+                    from: 'src/markdown', // where you put the _redirects file
+                    to: 'markdown',                 // output it at the root of /public
                 }
             ]
         }),
@@ -78,6 +83,12 @@ export default {
             template: "./src/projects/index.html",
             filename: "projects/index.html",
             chunks: ['projects'],
+            favicon: './src/imgs/logo.png'
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/blog/index.html",
+            filename: "blog/index.html",
+            chunks: ['blog'],
             favicon: './src/imgs/logo.png'
         })
     ]
