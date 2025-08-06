@@ -12,7 +12,8 @@ export default {
     entry: {
         "home": "./src/js/home.js",
         "projects": "./src/js/projects.js",
-        "blog": "./src/js/blog.js"
+        "blog": "./src/js/blog.js",
+        "post": "./src/js/post.js"
     },
     mode: 'development',
     output: {
@@ -38,19 +39,19 @@ export default {
         open: true,        // auto-opens the browser
         hot: true,         // enables hot module replacement
         liveReload: true,  // fallback auto-reload if HMR fails
-        // historyApiFallback: {
-        //     rewrites: [
-        //         {
-        //             from: /^\/blank\/[^\/]+$/, // matches /blank/anything
-        //             to: '/blank/index.html',   // serve blank/index.html
-        //         },
+        historyApiFallback: {
+            rewrites: [
+                {
+                    from: /^\/post\/[^\/]+$/, // matches /post/anything
+                    to: '/post/index.html',   // serve post/index.html
+                },
                 
-        //     ],
-        // },
+            ],
+        },
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/tailwind.css",
+            filename: "css/[name].css",
         }),
         new CopyWebpackPlugin({
             patterns: [
@@ -69,6 +70,10 @@ export default {
                 {
                     from: 'src/markdown', // where you put the _redirects file
                     to: 'markdown',                 // output it at the root of /public
+                },
+                {
+                    from: 'src/netlify.toml', // where you put the _redirects file
+                    to: 'netlify.toml',                 // output it at the root of /public
                 }
             ]
         }),
@@ -89,6 +94,12 @@ export default {
             template: "./src/blog/index.html",
             filename: "blog/index.html",
             chunks: ['blog'],
+            favicon: './src/imgs/logo.png'
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/post/index.html",
+            filename: "post/index.html",
+            chunks: ['post'],
             favicon: './src/imgs/logo.png'
         })
     ]

@@ -19,6 +19,7 @@
   "type": "module",
   "homepage": "https://github.com/ethanillingsworth/illingsworth.dev#readme",
   "dependencies": {
+    "highlight.js": "^11.11.1",
     "jquery": "^3.7.1",
     "marked": "^16.1.2",
     "tailwindcss": "^4.1.11"

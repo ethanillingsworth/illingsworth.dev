@@ -58,7 +58,6 @@
     @apply transition-all border-2 border-transparent hover:border-forge-accent hover:cursor-pointer
 }
 
-
 @layer base {
     body {
         @apply bg-forge-background text-forge-text flex flex-col h-dvh
@@ -87,7 +86,7 @@
         @apply rounded-2xl
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5, h6 {
         @apply font-bold
     }
 
@@ -120,6 +119,81 @@
     .project img {
         @apply w-full aspect-video
     }
+    .md h1 {
+        @apply text-4xl;
+    }
 
+    .md h2 {
+        @apply text-3xl;
+    }
+
+    .md h3 {
+        @apply text-2xl;
+    }
+
+    .md h4 {
+        @apply text-xl;
+    }
+
+    .md h5 {
+        @apply text-lg;
+    }
+
+    .md p {
+        @apply text-lg;
+    }
+
+    .md blockquote {
+        @apply bg-forge-surface p-4 rounded-2xl;
+    }
+
+    .md code {
+        @apply rounded-2xl
+    }
+
+    .md blockquote {
+        @apply bg-forge-surface/50
+    }
+
+    .md ul {
+        @apply list-disc list-outside pl-6;
+    }
+
+    .md ul ul {
+        @apply pl-6;
+    }
+
+    .md ol {
+        @apply list-decimal list-outside pl-6;
+    }
+
+    .md ol ol {
+        @apply pl-6;
+    }
+
+    .md a {
+        @apply text-forge-accent hover:underline
+    }
+
+    .md img {
+        @apply max-w-64 max-h-64 object-cover rounded-xl inline
+    }
+
+    .md blockquote p {
+        @apply text-white leading-12
+    }
+
+    .md table td,
+    .md table th {
+        @apply p-2;
+    }
+
+    .md th {
+        @apply text-left
+    }
+
+    .md thead {
+        @apply border-b-2 border-forge-accent
+    }
     
 }

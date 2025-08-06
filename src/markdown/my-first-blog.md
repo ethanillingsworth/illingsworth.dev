@@ -16,7 +16,7 @@ This is a sample blog post with a variety of markdown elements to test out the m
 
 ## Code block
 
-```none
+```
 No syntax coloring
 ```
 

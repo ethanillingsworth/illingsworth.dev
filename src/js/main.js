@@ -187,6 +187,10 @@ export class BlogPost {
         return await (await fetch(this.get().file)).text() || "# Sorry we couldnt find that content!\n(Go Home)[/]"
     }
 
+    async getHtml() {
+        return marked.parse(await this.getMarkdown())
+    }
+
     async getHeading() {
         return marked.lexer(await this.getMarkdown()).find(token => token.type === "heading" && token.depth === 1).text || "No Heading found"
     }

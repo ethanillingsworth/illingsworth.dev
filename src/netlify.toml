@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/post/*"
+to = "/post/index.html"
+status = 200
