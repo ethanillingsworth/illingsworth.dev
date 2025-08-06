@@ -195,6 +195,10 @@ export class BlogPost {
         return marked.lexer(await this.getMarkdown()).find(token => token.type === "heading" && token.depth === 1).text || "No Heading found"
     }
 
+    async getAllH2() {
+        return marked.lexer(await this.getMarkdown()).filter(token => token.type === "heading" && token.depth === 2).map((token) => {return token.text}) || []
+    }
+
     async getFirstParagraph() {
         return marked.lexer(await this.getMarkdown()).find(token => token.type === "paragraph").text || "No Paragraph found"
     }

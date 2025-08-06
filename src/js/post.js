@@ -23,3 +23,12 @@ hljs.highlightAll()
 
 $("#title").text("Ethan Illingsworth | " + await post.getHeading())
 $("#desc").text(await post.getFirstParagraph())
+
+$('h2').attr('id', function () {
+    return $(this).text().toLowerCase().replaceAll(" ", "-");
+});
+
+for (let h2 of await post.getAllH2()) {
+    $("#quick-links").append($("<a/>").text(h2).attr("href", "#" + h2.toLowerCase().replaceAll(" ", "-")))
+}
+
