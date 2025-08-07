@@ -205,3 +205,5 @@ export class BlogPost {
         return marked.parse(marked.lexer(await this.getMarkdown()).find(token => token.type === "paragraph").text) || "No Paragraph found"
     }
 }
+
+$(".card").attr("tabindex", "0")
