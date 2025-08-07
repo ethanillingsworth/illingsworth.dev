@@ -18,24 +18,24 @@ export class JSON {
 
 export class Tag {
         static tagColors = {
-            "JavaScript": "text-yellow-400 bg-yellow-500/50",
-            "HTML5": "text-orange-400 bg-orange-500/50",
-            "CSS3": "text-blue-400 bg-blue-500/50",
-            "Tailwind CSS": "text-cyan-400 bg-cyan-500/50",
-            "jQuery": "text-purple-400 bg-purple-500/50",
-            "Webpack": "text-gray-400 bg-gray-500/50",
-            "Firebase": "text-rose-400 bg-rose-500/50",
-            "Python": "text-sky-400 bg-sky-500/50",              
-            "Java": "text-red-400 bg-red-500/50",                
-            "Swift": "text-orange-300 bg-orange-400/50",         
-            "Python Packaging (Poetry)": "text-emerald-400 bg-emerald-500/50", 
+            "JavaScript": "text-yellow-300 bg-yellow-500/50",
+            "HTML5": "text-orange-300 bg-orange-500/50",
+            "CSS3": "text-blue-300 bg-blue-500/50",
+            "Tailwind CSS": "text-cyan-300 bg-cyan-500/50",
+            "jQuery": "text-purple-300 bg-purple-500/50",
+            "Webpack": "text-gray-300 bg-gray-500/50",
+            "Firebase": "text-rose-300 bg-rose-500/50",
+            "Python": "text-sky-300 bg-sky-500/50",              
+            "Java": "text-red-300 bg-red-500/50",                
+            "Swift": "text-orange-200 bg-orange-400/50",         
+            "Python Packaging (Poetry)": "text-emerald-300 bg-emerald-500/50", 
             "SwiftUI": "text-indigo-300 bg-indigo-500/50",       
             "React": "text-teal-300 bg-teal-500/50",
-            "JSON": "text-amber-400 bg-amber-500/50",
-            "Markdown": "text-gray-700 bg-gray-800/50",
-            "Backend": "text-green-400 bg-green-500/50",
-            "Frontend": "text-blue-400 bg-blue-500/50",
-            "Other": "text-gray-500 bg-gray-600/50"
+            "JSON": "text-amber-300 bg-amber-500/50",
+            "Markdown": "text-gray-500 bg-gray-700/50",
+            "Backend": "text-green-300 bg-green-500/50",
+            "Frontend": "text-blue-300 bg-blue-500/50",
+            "Other": "text-gray-400 bg-gray-600/50"
         };
 
     static getElement(tag) {

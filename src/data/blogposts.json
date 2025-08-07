@@ -3,7 +3,8 @@
         "date": "2025-08-05",
         "file": "/markdown/my-first-blog.md",
         "tags": [
-            "Other"
+            "Other",
+            "Markdown"
         ],
         "featured": false
     },
