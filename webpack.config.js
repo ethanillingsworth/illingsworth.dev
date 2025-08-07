@@ -14,7 +14,9 @@ export default {
         "home": "./src/js/home.js",
         "projects": "./src/js/projects.js",
         "blog": "./src/js/blog.js",
-        "post": "./src/js/post.js"
+        "post": "./src/js/post.js",
+        "services": "./src/js/services.js"
+
     },
     mode: 'development',
     output: {
@@ -108,6 +110,12 @@ export default {
             template: "./src/post/index.html",
             filename: "post/index.html",
             chunks: ['post'],
+            favicon: './src/imgs/logo.png'
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/services/index.html",
+            filename: "services/index.html",
+            chunks: ['services'],
             favicon: './src/imgs/logo.png'
         })
     ]
