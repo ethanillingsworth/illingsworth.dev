@@ -31,8 +31,26 @@ hljs.highlightAll()
 $("#title").text("Ethan Illingsworth | " + await post.getHeading())
 $("#desc").text(await post.getFirstParagraph())
 
+$('h1').attr('id', function () {
+    return $(this).text().toLowerCase().replaceAll(" ", "-");
+});
+
 $('h2').attr('id', function () {
     return $(this).text().toLowerCase().replaceAll(" ", "-");
 });
 
+$('h3').attr('id', function () {
+    return $(this).text().toLowerCase().replaceAll(" ", "-");
+});
 
+$('h4').attr('id', function () {
+    return $(this).text().toLowerCase().replaceAll(" ", "-");
+});
+
+$('h5').attr('id', function () {
+    return $(this).text().toLowerCase().replaceAll(" ", "-");
+});
+
+$('h6').attr('id', function () {
+    return $(this).text().toLowerCase().replaceAll(" ", "-");
+});
