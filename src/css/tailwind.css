@@ -60,7 +60,7 @@
 
 @layer base {
     body {
-        @apply bg-forge-background text-forge-text flex flex-col h-dvh
+        @apply bg-forge-background text-forge-text flex flex-col h-dvh scheme-only-dark
     }
 
     hr {
@@ -69,7 +69,7 @@
 
     progress {
         @apply rounded-xl h-2 w-full bg-forge-muted;
-        @apply [&::-webkit-progress-bar]:rounded-xl [&::-webkit-progress-value]:rounded-xl [&::-webkit-progress-value]:gradient-bg [&::-webkit-progress-bar]:bg-forge-muted;
+        @apply [&::-webkit-progress-bar]:rounded-xl [&::-webkit-progress-value]:rounded-xl [&::-webkit-progress-value]:bg-current [&::-webkit-progress-bar]:bg-forge-muted;
         @apply [&::-moz-progress-bar]:bg-current;
     }
 
