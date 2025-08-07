@@ -71,6 +71,7 @@ export class Project {
             .addClass("flex flex-col gap-6 items-start h-full");
 
         const image = $("<img/>")
+            .attr("alt", `${data.title}`)
             .attr("src", `/imgs/previews/${this.id}.png`)
             .addClass("w-full object-cover");
 
@@ -83,7 +84,7 @@ export class Project {
 
         const title = $("<h3/>").text(data.title);
 
-        const star = $("<img/>").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto")
+        const star = $("<img/>").attr("alt", "Star").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto")
 
         const desc = $("<p/>").text(data.desc);
 
@@ -94,12 +95,12 @@ export class Project {
         }
 
         const githubButton = $(`<a class="badge bg-black" href="${data.github}" target="_blank">
-                    <img class="icon" src="/icons/github.svg">
+                    <img alt="Github Icon" class="icon" src="/icons/github.svg">
                     <span>Github</span>
                 </a>`)
         
         const webButton = $(`<a class="badge bg-blue-500" href="${data.web}" target="_blank">
-                    <img class="icon" src="/icons/web.svg">
+                    <img alt="Web Icon" class="icon" src="/icons/web.svg">
                     <span>Website</span>
                 </a>`)
         const bottom = $("<div/>").addClass("flex flex-row gap-3 mt-auto pt-4 place-items-end")
@@ -162,7 +163,7 @@ export class BlogPost {
             .addClass("flex flex-col gap-1.5 items-start h-full card post mt-4")
             .attr("href", "/post/" + this.id)
 
-        const star = $("<img/>").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto float-end inline")
+        const star = $("<img/>").attr("alt", "Star").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto float-end inline")
 
         const heading = $("<h3/>").text(await this.getHeading()).addClass("w-full")
         const desc = $("<p/>").html(await this.getFirstParagraph()).addClass("line-clamp-2")
