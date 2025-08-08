@@ -124,6 +124,10 @@
         @apply whitespace-normal
     }
 
+    .post code {
+        @apply text-sm
+    }
+
     .md {
         @apply !text-white
     }
@@ -156,8 +160,8 @@
         @apply bg-forge-surface/50 p-4 rounded-2xl;
     }
 
-    .md code {
-        @apply rounded-2xl bg-forge-gold/10 p-1 px-2 text-forge-gold text-wrap
+    code {
+        @apply rounded-2xl bg-forge-accent/10 p-1 px-2 text-forge-accent text-wrap text-base
     }
 
 

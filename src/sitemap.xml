@@ -13,10 +13,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://illingsworth.dev/services</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://illingsworth.dev/blog/my-first-blog</loc>
     <lastmod>2025-08-05</lastmod>
     <priority>0.6</priority>
@@ -24,6 +20,11 @@
   <url>
     <loc>https://illingsworth.dev/blog/markdown-to-blog</loc>
     <lastmod>2025-08-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://illingsworth.dev/blog/get-started-with-webpack</loc>
+    <lastmod>2025-08-07</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

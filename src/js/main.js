@@ -144,10 +144,15 @@ export class BlogPost {
 
     static getAll() {
         return Object.entries(posts)
-            .sort(([_, a], [__, b]) => {
-                return (b.featured === true) - (a.featured === true);
-            })
-            .map(([key, _]) => new BlogPost(key));
+        .sort(([_, a], [__, b]) => {
+            // First sort: featured posts first
+            if (b.featured !== a.featured) {
+            return (b.featured === true) - (a.featured === true);
+            }
+            // Second sort: newest date first
+            return new Date(b.date) - new Date(a.date);
+        })
+        .map(([key, _]) => new BlogPost(key));
     }
 
     static getFeatured() {
@@ -160,7 +165,7 @@ export class BlogPost {
         const data = this.get()
 
         const content = $("<a/>")
-            .addClass("flex flex-col gap-1.5 items-start h-full card post mt-4")
+            .addClass("flex flex-col gap-2 items-start h-full card post mt-4")
             .attr("href", "/post/" + this.id)
 
         const star = $("<img/>").attr("alt", "Star").attr("src", "/icons/star.svg").addClass("h-8 aspect-square w-auto float-end inline")

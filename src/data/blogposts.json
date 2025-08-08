@@ -19,6 +19,17 @@
             "JSON",
             "HTML5"
         ],
+        "featured": false
+    },
+    "get-started-with-webpack": {
+        "date": "2025-08-07",
+        "file": "../markdown/get-started-with-webpack.md",
+        "tags": [
+            "Webpack",
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+        ],
         "featured": true
     }
 }

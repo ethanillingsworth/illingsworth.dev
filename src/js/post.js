@@ -6,6 +6,8 @@ import html from 'highlight.js/lib/languages/xml'; // `xml` = html/svg/xhtml
 import css from 'highlight.js/lib/languages/css';
 import json from 'highlight.js/lib/languages/json';
 import markdown from 'highlight.js/lib/languages/markdown';
+import bash from 'highlight.js/lib/languages/bash';
+
 
 import "highlight.js/styles/atom-one-dark.css"
 
@@ -16,6 +18,8 @@ hljs.registerLanguage('json', json);
 hljs.registerLanguage('html', html);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('markdown', markdown);
+hljs.registerLanguage('bash', bash);
+
 
 
 const path = window.location.pathname;
