@@ -45,10 +45,18 @@ export default {
         historyApiFallback: {
             rewrites: [
                 {
-                    from: /^\/post\/[^\/]+$/, // matches /post/anything
-                    to: '/post/index.html',   // serve post/index.html
+                    from: /^\/post\/[^\/]+(?:\/.*)?$/, // match /post/anything (+ optional trailing slash/segments)
+                    to: '/pages/post.html',
                 },
-                
+                {
+                    from: /^\/([^\/]+)$/,              // match /anything
+                    to: (context) => `/pages/${context.match[1]}.html`,
+                },
+                {
+                    from: "/",   // capture anything after the first slash
+                    to: '/pages/index.html',   // serve "anything/index.html"
+                },
+
             ],
         },
     },
@@ -87,34 +95,34 @@ export default {
                 }
             ]
         }),
-        
+
         new HtmlWebpackPlugin({
-            template: "./src/index.html",
-            filename: "index.html",
+            template: "./src/pages/index.html",
+            filename: "pages/index.html",
             chunks: ['home'],
             favicon: './src/imgs/logo.png'
         }),
         new HtmlWebpackPlugin({
-            template: "./src/projects/index.html",
-            filename: "projects/index.html",
+            template: "./src/pages/projects.html",
+            filename: "pages/projects.html",
             chunks: ['projects'],
             favicon: './src/imgs/logo.png'
         }),
         new HtmlWebpackPlugin({
-            template: "./src/blog/index.html",
-            filename: "blog/index.html",
+            template: "./src/pages/blog.html",
+            filename: "pages/blog.html",
             chunks: ['blog'],
             favicon: './src/imgs/logo.png'
         }),
         new HtmlWebpackPlugin({
-            template: "./src/post/index.html",
-            filename: "post/index.html",
+            template: "./src/pages/post.html",
+            filename: "pages/post.html",
             chunks: ['post'],
             favicon: './src/imgs/logo.png'
         }),
         new HtmlWebpackPlugin({
-            template: "./src/services/index.html",
-            filename: "services/index.html",
+            template: "./src/pages/services.html",
+            filename: "pages/services.html",
             chunks: ['services'],
             favicon: './src/imgs/logo.png'
         })
