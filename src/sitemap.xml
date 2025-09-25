@@ -4,27 +4,31 @@
     <loc>https://illingsworth.dev/</loc>
     <priority>1.0</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://illingsworth.dev/blog</loc>
     <priority>0.8</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://illingsworth.dev/projects</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://illingsworth.dev/blog/my-first-blog</loc>
+    <loc>https://illingsworth.dev/services</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- <url>
+    <loc>https://illingsworth.dev/post/my-first-blog</loc>
     <lastmod>2025-08-05</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://illingsworth.dev/blog/markdown-to-blog</loc>
+    <loc>https://illingsworth.dev/post/markdown-to-blog</loc>
     <lastmod>2025-08-06</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://illingsworth.dev/blog/get-started-with-webpack</loc>
+    <loc>https://illingsworth.dev/post/get-started-with-webpack</loc>
     <lastmod>2025-08-07</lastmod>
     <priority>0.6</priority>
-  </url>
+  </url> -->
 </urlset>

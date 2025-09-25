@@ -1,142 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ethan Illingsworth | Aspiring Web Developer</title>
+		<meta
+			name="description"
+			content="Welcome to Ethan Illingsworth's personal website! I'm a developer and entrepreneur passionate about building helpful and organized software solutions. Here, you'll find my latest projects, blog posts, and services I offer. Check out my GitHub, and feel free to connect!"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Illingsworth | Aspiring Web Developer</title>
-    <meta name="description"
-        content="Welcome to Ethan Illingsworth's personal website! I'm a developer and entrepreneur passionate about building helpful and organized software solutions. Here, you'll find my latest projects, blog posts, and services I offer. Check out my GitHub, and feel free to connect!">
+	<body>
+		<div class="content">
+			<!-- HERO -->
 
-</head>
+			<div class="hero">
+				<div
+					class="-z-10 hero-image bg-[url(~@imgs/backdrops/services.jpg)]"
+				></div>
+				<img
+					alt="Profile Image"
+					class="w-40 md:w-50"
+					src="/imgs/profile.jpeg"
+				/>
+				<h1 class="text-3xl md:text-4xl">My Services</h1>
+				<h2 class="text-forge-subtext text-xl md:text-2xl">
+					Affordable Professinal Services
+				</h2>
+				<div class="flex-row flex gap-3 text-base">
+					<a
+						class="badge bg-red-500"
+						href="mailto:illingsworth.ethan@gmail.com"
+						target="_blank"
+					>
+						<img
+							alt="Email Icon"
+							class="icon"
+							src="icons/email.svg"
+						/>
+						<span>Email Me</span>
+					</a>
+				</div>
+			</div>
+			<div class="sections">
+				<section id="services">
+					<h2>Services</h2>
+					<hr />
+					<div
+						class="grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
+					>
+						<div class="card">
+							<h4>Static Websites</h4>
+							<!-- <h5>Price: $100 - $250</h5> -->
+							<p>
+								Fast, secure, and responsive websites built with
+								HTML5, Tailwind CSS, and deployed to platforms
+								like Netlify or Vercel.
+							</p>
+							<div class="flex flex-row gap-3">
+								<span class="text-blue-300 bg-blue-500/50 tag"
+									>Frontend</span
+								>
+							</div>
+							<div class="flex flex-row gap-3 ml-auto mt-auto">
+								<a
+									class="badge text-sm bg-red-500"
+									href="mailto:illingsworth.ethan@gmail.com"
+									target="_blank"
+								>
+									<img
+										alt="Email"
+										class="icon"
+										src="icons/email.svg"
+									/>
+									<span>Contact for Details</span>
+								</a>
+							</div>
+						</div>
+						<div class="card">
+							<h4>Landing Pages</h4>
+							<!-- <h5>Price: $120 - $300</h5> -->
+							<p>
+								High-converting landing pages designed for
+								speed, SEO, and first impressions. Built with
+								Tailwind CSS or custom HTML/CSS.
+							</p>
+							<div class="flex flex-row gap-3">
+								<span class="text-blue-300 bg-blue-500/50 tag"
+									>Frontend</span
+								>
+							</div>
+							<div class="flex flex-row gap-3 ml-auto mt-auto">
+								<a
+									class="badge text-sm bg-red-500"
+									href="mailto:illingsworth.ethan@gmail.com"
+									target="_blank"
+								>
+									<img
+										alt="Email"
+										class="icon"
+										src="icons/email.svg"
+									/>
+									<span>Contact for Details</span>
+								</a>
+							</div>
+						</div>
+						<div class="card">
+							<h4>Frontend UI/UX</h4>
+							<!-- <h5>Price: $150 - $350</h5> -->
+							<p>
+								Responsive, accessible, and performant UIs using
+								Tailwind CSS and jQuery. Includes hover states,
+								animations, and design fidelity.
+							</p>
+							<div class="flex flex-row gap-3">
+								<span class="text-blue-300 bg-blue-500/50 tag"
+									>Frontend</span
+								>
+							</div>
+							<div class="flex flex-row gap-3 ml-auto mt-auto">
+								<a
+									class="badge text-sm bg-red-500"
+									href="mailto:illingsworth.ethan@gmail.com"
+									target="_blank"
+								>
+									<img
+										alt="Email"
+										class="icon"
+										src="icons/email.svg"
+									/>
+									<span>Contact for Details</span>
+								</a>
+							</div>
+						</div>
+						<div class="card">
+							<h4>Code Review</h4>
+							<!-- <h5>Price: $30 per session</h5> -->
+							<p>
+								Detailed review of your frontend code for
+								readability, performance, and best practices.
+								Delivered via annotated files
+							</p>
+							<div class="flex flex-row gap-3">
+								<span class="text-blue-300 bg-blue-500/50 tag"
+									>Frontend</span
+								>
+							</div>
+							<div class="flex flex-row gap-3 ml-auto mt-auto">
+								<a
+									class="badge text-sm bg-red-500"
+									href="mailto:illingsworth.ethan@gmail.com"
+									target="_blank"
+								>
+									<img
+										alt="Email"
+										class="icon"
+										src="icons/email.svg"
+									/>
+									<span>Contact for Details</span>
+								</a>
+							</div>
+						</div>
+						<div class="card">
+							<h4>Developer Mentorship</h4>
+							<!-- <h5>Price: $25 / 30 mins</h5> -->
+							<p>
+								Helping newer developers grow with advice on
+								tools, workflows, debugging, and real-world
+								problem solving.
+							</p>
+							<div class="flex flex-row gap-3">
+								<span class="text-blue-300 bg-blue-500/50 tag"
+									>Frontend</span
+								>
+								<span class="text-green-300 bg-green-500/50 tag"
+									>Backend</span
+								>
+							</div>
+							<div class="flex flex-row gap-3 ml-auto mt-auto">
+								<a
+									class="badge text-sm bg-red-500"
+									href="mailto:illingsworth.ethan@gmail.com"
+									target="_blank"
+								>
+									<img
+										alt="Email"
+										class="icon"
+										src="icons/email.svg"
+									/>
+									<span>Contact for Details</span>
+								</a>
+							</div>
+						</div>
 
-<body>
-    <!-- NAV -->
-    <header class="nav">
-        <a href="/">illingsworth.dev</a>
-        <hr class="vertical border-forge-accent" />
-        <a href="#services">All Services</a>
-
-        <div class="flex flex-row ml-auto gap-6">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/projects">Projects</a>
-            <a href="/services">Services</a>
-        </div>
-    </header>
-
-    <div class="content">
-
-        <!-- HERO -->
-
-        <div class="hero">
-            <img alt="Profile Image" class="w-50 border-4 border-forge-surface" src="/imgs/profile.jpeg">
-            <h1 class="text-4xl">My Services</h1>
-            <h2 class="text-forge-subtext text-2xl">Affordable Professinal Services</h2>
-            <div class="flex-row flex gap-3 text-base">
-                <a class="badge bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                    <img alt="Email Icon" class="icon" src="icons/email.svg">
-                    <span>Email Me</span>
-                </a>
-            </div>
-        </div>
-
-        <section id="services">
-            <h2>Services</h2>
-            <hr />
-            <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
-                <div class="card">
-                    <h4>Static Websites</h4>
-                    <!-- <h5>Price: $100 - $250</h5> -->
-                    <p>Fast, secure, and responsive websites built with HTML5, Tailwind CSS, and deployed to platforms like Netlify or Vercel.</p>
-                    <div class="flex flex-row gap-3">
-                        <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                    </div>
-                    <div class="flex flex-row gap-3 ml-auto mt-auto">
-                        <a class="badge text-sm bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                            <img alt="Email" class="icon" src="icons/email.svg">
-                            <span>Contact for Details</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h4>Landing Pages</h4>
-                    <!-- <h5>Price: $120 - $300</h5> -->
-                    <p>High-converting landing pages designed for speed, SEO, and first impressions. Built with Tailwind CSS or custom HTML/CSS.</p>
-                    <div class="flex flex-row gap-3">
-                        <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                    </div>
-                    <div class="flex flex-row gap-3 ml-auto mt-auto">
-                        <a class="badge text-sm bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                            <img alt="Email" class="icon" src="icons/email.svg">
-                            <span>Contact for Details</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h4>Frontend UI/UX</h4>
-                    <!-- <h5>Price: $150 - $350</h5> -->
-                    <p>Responsive, accessible, and performant UIs using Tailwind CSS and jQuery. Includes hover states, animations, and design fidelity.</p>
-                    <div class="flex flex-row gap-3">
-                        <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                    </div>
-                    <div class="flex flex-row gap-3 ml-auto mt-auto">
-                        <a class="badge text-sm bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                            <img alt="Email" class="icon" src="icons/email.svg">
-                            <span>Contact for Details</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h4>Code Review</h4>
-                    <!-- <h5>Price: $30 per session</h5> -->
-                    <p>Detailed review of your frontend code for readability, performance, and best practices. Delivered via annotated files</p>
-                    <div class="flex flex-row gap-3">
-                        <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                    </div>
-                    <div class="flex flex-row gap-3 ml-auto mt-auto">
-                        <a class="badge text-sm bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                            <img alt="Email" class="icon" src="icons/email.svg">
-                            <span>Contact for Details</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <h4>Developer Mentorship</h4>
-                    <!-- <h5>Price: $25 / 30 mins</h5> -->
-                    <p>Helping newer developers grow with advice on tools, workflows, debugging, and real-world problem solving.</p>
-                    <div class="flex flex-row gap-3">
-                        <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-
-                    </div>
-                    <div class="flex flex-row gap-3 ml-auto mt-auto">
-                        <a class="badge text-sm bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                            <img alt="Email" class="icon" src="icons/email.svg">
-                            <span>Contact for Details</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h4>Docs & README Writing</h4>
-                    <!-- <h5>Price: $40 - $75</h5> -->
-                    <p>Clear, concise documentation and GitHub READMEs for projects, APIs, and internal tools. Easy to read, easy to use.</p>
-                    <div class="flex flex-row gap-3">
-                        <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                    </div>
-                    <div class="flex flex-row gap-3 ml-auto mt-auto">
-                        <a class="badge text-sm bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                            <img alt="Email" class="icon" src="icons/email.svg">
-                            <span>Contact for Details</span>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-</body>
-
+						<div class="card">
+							<h4>Docs & README Writing</h4>
+							<!-- <h5>Price: $40 - $75</h5> -->
+							<p>
+								Clear, concise documentation and GitHub READMEs
+								for projects, APIs, and internal tools. Easy to
+								read, easy to use.
+							</p>
+							<div class="flex flex-row gap-3">
+								<span class="text-blue-300 bg-blue-500/50 tag"
+									>Frontend</span
+								>
+							</div>
+							<div class="flex flex-row gap-3 ml-auto mt-auto">
+								<a
+									class="badge text-sm bg-red-500"
+									href="mailto:illingsworth.ethan@gmail.com"
+									target="_blank"
+								>
+									<img
+										alt="Email"
+										class="icon"
+										src="icons/email.svg"
+									/>
+									<span>Contact for Details</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
 </html>

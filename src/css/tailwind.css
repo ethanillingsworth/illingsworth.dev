@@ -2,212 +2,225 @@
 
 /* Borrow from SyntaxForge for now */
 @theme {
-    --color-forge-background: #0e0e11;
-    --color-forge-surface: #1a1a1f;
-    --color-forge-muted: #2a2a30;
-    --color-forge-text: #e6e6e9;
-    --color-forge-subtext: #a0a0a8;
+	--color-forge-background: #0e0e11;
+	--color-forge-surface: #1a1a1f;
+	--color-forge-muted: #2a2a30;
+	--color-forge-text: #e6e6e9;
+	--color-forge-subtext: #a0a0a8;
 
-    
-    --color-forge-accent: #ff7b72;
-    --color-forge-accent-hover: #e96b65;
-    --color-forge-gold: #f4c06d
+	--color-forge-accent: #ff7b72;
+	--color-forge-accent-hover: #e96b65;
+	--color-forge-gold: #f4c06d;
 }
 
 @utility badge {
-    @apply p-3 rounded-xl text-white flex flex-row gap-1.5 place-content-center place-items-center hover:scale-105 select-none font-bold transition-transform
+	@apply p-3 rounded-xl text-white flex flex-row gap-1.5 place-content-center place-items-center hover:scale-105 select-none font-bold transition-transform;
 }
 
 @utility icon {
-    @apply aspect-square object-contain h-[1.5em] invert rounded-none
-}
-
-@utility gradient-bg {
-    @apply bg-gradient-to-r from-forge-accent to-forge-gold
-}
-
-@utility gradient-text {
-    @apply leading-tight bg-gradient-to-r from-forge-accent to-forge-gold bg-clip-text text-transparent
+	@apply aspect-square object-contain h-[1.5em] rounded-none;
 }
 
 @utility nav {
-    @apply sticky top-0 flex flex-row w-full gap-6 border-b-forge-accent bg-forge-surface border-b-2 px-6 py-3 text-xl font-bold
+	@apply sticky top-0 place-items-center w-16 flex flex-col z-10 min-h-full gap-6 border-r-forge-accent bg-forge-background border-r-2 py-6 px-3 text-xl font-bold;
 }
 
 @utility hero {
-    @apply w-full h-full flex flex-col place-content-center place-items-center gap-3 min-h-full mb-20
+	@apply w-full min-h-full flex flex-col place-content-center place-items-center gap-3 relative overflow-visible;
+}
+
+@utility hero-image {
+	@apply absolute inset-0 bg-cover bg-center filter brightness-50 blur-xs;
 }
 
 @utility content {
-    @apply w-full h-full overflow-y-auto flex flex-col gap-6 p-20 place-content-start place-items-start
+	@apply w-full h-full flex flex-col place-content-start place-items-start overflow-auto mb-20 min-h-full;
 }
 
 @utility card {
-    @apply w-full bg-forge-surface rounded-2xl p-3 flex flex-col gap-3
+	@apply w-full bg-forge-surface rounded-2xl p-3 flex flex-col gap-3;
 }
 
 @utility tag {
-    @apply rounded-2xl p-1.5 px-3 font-bold text-sm
+	@apply rounded-2xl p-1.5 px-3 font-bold text-sm;
 }
 
 @utility vertical {
-    @apply border-0 border-r-2 w-auto h-full
+	@apply border-0 border-r-2 w-auto h-full;
 }
 
 @utility post {
-    @apply transition-all border-2 border-transparent hover:border-forge-accent hover:cursor-pointer
+	@apply transition-all border-2 border-transparent hover:border-forge-accent hover:cursor-pointer;
+}
+
+@utility sections {
+	@apply content p-5 md:p-20 overflow-visible gap-6 min-h-full;
+}
+
+@utility link-icon {
+	@apply aspect-square object-contain h-auto p-1 transition-colors;
+	@apply hover:bg-forge-surface;
 }
 
 @layer base {
-    body {
-        @apply bg-forge-background text-forge-text flex flex-col h-dvh scheme-only-dark
-    }
+	body {
+		@apply bg-forge-background text-forge-text flex flex-row h-dvh scheme-only-dark;
+	}
 
-    hr {
-        @apply border-0 border-b-2 border-forge-muted rounded-2xl
-    }
+	.nav img {
+		@apply rounded-xl;
+	}
 
-    progress {
-        @apply rounded-xl h-2 w-full bg-forge-muted;
-        @apply [&::-webkit-progress-bar]:rounded-xl [&::-webkit-progress-value]:rounded-xl [&::-webkit-progress-value]:bg-current [&::-webkit-progress-bar]:bg-forge-muted;
-        @apply [&::-moz-progress-bar]:bg-current;
-    }
+	hr {
+		@apply border-0 border-b-2 border-forge-muted rounded-2xl w-full;
+	}
 
+	progress {
+		@apply rounded-xl h-2 w-full bg-forge-muted;
+		@apply [&::-webkit-progress-bar]:rounded-xl [&::-webkit-progress-value]:rounded-xl [&::-webkit-progress-value]:bg-current [&::-webkit-progress-bar]:bg-forge-muted;
+		@apply [&::-moz-progress-bar]:bg-current;
+	}
 
-    section {
-        @apply flex flex-col gap-1.5 w-full
-    }
+	section {
+		@apply flex flex-col gap-1.5 w-full;
+	}
 
-    p {
-        @apply whitespace-pre-line text-lg
-    }
+	p {
+		@apply text-lg;
+	}
 
-    img {
-        @apply rounded-2xl
-    }
+	img {
+		@apply rounded-2xl;
+	}
 
-    h1, h2, h3, h4, h5, h6 {
-        @apply font-bold
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
 
-    h1 {
-        @apply text-3xl
-    }
-    h2 {
-        @apply text-2xl
-    }
-    h3 {
-        @apply text-xl
-    }
+	h1 {
+		@apply text-3xl;
+	}
+	h2 {
+		@apply text-2xl;
+	}
+	h3 {
+		@apply text-xl;
+	}
 
-    h4 {
-        @apply text-lg font-bold
-    }
+	h4 {
+		@apply text-lg font-bold;
+	}
 
-    h5 {
-        @apply text-base
-    }
+	h5 {
+		@apply text-base;
+	}
 
-    p {
-        @apply text-base text-forge-subtext
-    }
+	p {
+		@apply text-base text-forge-subtext;
+	}
 
-    .nav a {
-        @apply hover:text-forge-accent transition-colors
-    }
+	.nav a {
+		@apply hover:text-forge-accent transition-colors;
+	}
 
-    .project img {
-        @apply w-full aspect-video
-    }
+	.project img {
+		@apply w-full aspect-video;
+	}
 
-    .post p {
-        @apply whitespace-normal
-    }
+	.post p {
+		@apply whitespace-normal;
+	}
 
-    .post code {
-        @apply text-sm
-    }
+	.post code {
+		@apply text-sm;
+	}
 
-    .md {
-        @apply !text-white
-    }
+	.md {
+		@apply !text-white;
+	}
 
-    .md h1 {
-        @apply text-4xl border-b-2 pb-3 border-forge-accent w-full;
-    }
+	.md h1 {
+		@apply text-4xl border-b-2 pb-3 border-forge-accent w-full;
+	}
 
-    .md h2 {
-        @apply text-3xl border-b-2 pb-3 border-forge-muted w-full;
-    }
+	.md h2 {
+		@apply text-3xl border-b-2 pb-3 border-forge-muted w-full;
+	}
 
-    .md h3 {
-        @apply text-2xl;
-    }
+	.md h3 {
+		@apply text-2xl;
+	}
 
-    .md h4 {
-        @apply text-xl;
-    }
+	.md h4 {
+		@apply text-xl;
+	}
 
-    .md h5 {
-        @apply text-lg;
-    }
+	.md h5 {
+		@apply text-lg;
+	}
 
-    .md p, .md ol, .md ul, .md table {
-        @apply text-lg whitespace-normal text-white
-    }
+	.md p,
+	.md ol,
+	.md ul,
+	.md table {
+		@apply text-lg whitespace-normal text-white;
+	}
 
-    .md blockquote {
-        @apply bg-forge-surface/50 p-4 rounded-2xl;
-    }
+	.md blockquote {
+		@apply bg-forge-surface/50 p-4 rounded-2xl;
+	}
 
-    code {
-        @apply rounded-2xl bg-forge-accent/10 p-1 px-2 text-forge-accent text-wrap text-base
-    }
+	code {
+		@apply rounded-2xl bg-forge-accent/10 p-1 px-2 text-forge-accent text-wrap text-base;
+	}
 
+	.md ul {
+		@apply list-disc list-outside pl-6;
+	}
 
-    .md ul {
-        @apply list-disc list-outside pl-6;
-    }
+	.md ul ul {
+		@apply pl-6;
+	}
 
-    .md ul ul {
-        @apply pl-6;
-    }
+	.md ol {
+		@apply list-decimal list-outside pl-6;
+	}
 
-    .md ol {
-        @apply list-decimal list-outside pl-6;
-    }
+	.md ol ol {
+		@apply pl-6;
+	}
 
-    .md ol ol {
-        @apply pl-6;
-    }
+	.md a {
+		@apply text-forge-accent hover:underline;
+	}
 
-    .md a {
-        @apply text-forge-accent hover:underline
-    }
+	p a {
+		@apply text-forge-accent hover:underline;
+	}
 
-    p a {
-        @apply text-forge-accent hover:underline
-    }
+	.md img {
+		@apply max-w-64 max-h-64 object-cover rounded-xl inline;
+	}
 
-    .md img {
-        @apply max-w-64 max-h-64 object-cover rounded-xl inline
-    }
+	.md blockquote p {
+		@apply text-white leading-12;
+	}
 
-    .md blockquote p {
-        @apply text-white leading-12
-    }
+	.md table td,
+	.md table th {
+		@apply p-2;
+	}
 
-    .md table td,
-    .md table th {
-        @apply p-2;
-    }
+	.md th {
+		@apply text-left;
+	}
 
-    .md th {
-        @apply text-left
-    }
-
-    .md thead {
-        @apply border-b-2 border-forge-accent
-    }
-    
+	.md thead {
+		@apply border-b-2 border-forge-accent;
+	}
 }

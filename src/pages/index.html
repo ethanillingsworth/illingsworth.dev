@@ -1,277 +1,677 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ethan Illingsworth | Aspiring Web Developer</title>
+		<meta
+			name="description"
+			content="Welcome to Ethan Illingsworth's personal website! I'm a developer and entrepreneur passionate about building helpful and organized software solutions. Here, you'll find my latest projects, blog posts, and services I offer. Check out my GitHub, and feel free to connect!"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Illingsworth | Aspiring Web Developer</title>
-    <meta name="description"
-        content="Welcome to Ethan Illingsworth's personal website! I'm a developer and entrepreneur passionate about building helpful and organized software solutions. Here, you'll find my latest projects, blog posts, and services I offer. Check out my GitHub, and feel free to connect!">
+	<body>
+		<!-- NAV -->
 
-</head>
+		<div class="content">
+			<!-- HERO -->
+			<div class="hero">
+				<div
+					class="-z-10 hero-image bg-[url(~@imgs/backdrops/home.jpg)]"
+				></div>
+				<img
+					alt="Profile Image"
+					class="w-40 md:w-50"
+					src="/imgs/profile.jpeg"
+				/>
+				<h1 class="text-3xl md:text-4xl">Ethan Illingsworth</h1>
+				<h2 class="text-forge-subtext text-xl md:text-2xl">
+					Aspiring Web Developer
+				</h2>
+				<div class="flex-col md:flex-row flex gap-3 text-base">
+					<a
+						class="badge bg-black"
+						href="https://github.com/ethanillingsworth"
+						target="_blank"
+					>
+						<img
+							alt="Github Icon"
+							class="icon"
+							src="icons/github.svg"
+						/>
+						<span>Github</span>
+					</a>
+					<a
+						class="badge bg-[#0077B5]"
+						href="https://linkedin.com/in/ethanillingsworth"
+						target="_blank"
+					>
+						<img
+							alt="Linkedin Icon"
+							class="icon"
+							src="icons/linkedin.svg"
+						/>
+						<span>Linkedin</span>
+					</a>
+					<a
+						class="badge bg-red-500"
+						href="mailto:illingsworth.ethan@gmail.com"
+						target="_blank"
+					>
+						<img
+							alt="Email Icon"
+							class="icon"
+							src="icons/email.svg"
+						/>
+						<span>Email Me</span>
+					</a>
+				</div>
+			</div>
+			<div class="sections">
+				<section id="about" tabindex="0">
+					<h2>About Me</h2>
+					<hr />
+					<p class="text-lg text-forge-text">
+						At heart I'm a developer who aims to make helpful
+						software. I'm currently working with tools like Webpack,
+						TailwindCSS, and jQuery to make that dream come true. I
+						am currently a Junior in highschool trying to make 10
+						year old me's dreams a reality, one line of code at a
+						time. I like to keep my projects organized, even if my
+						life currently isnt. I work on projects I believe in.
+						You should too.
+					</p>
+				</section>
 
-<body>
-    <!-- NAV -->
-    <header class="nav">
-        <a href="/">illingsworth.dev</a>
-        <hr class="vertical border-forge-accent" />
-        <a href="#about">About Me</a>
-        <a href="#featured-project">Project</a>
-        <a href="#featured-blog-post">Blog Post</a>
-        <a href="#skills">Skills</a>
-        <div class="flex flex-row ml-auto gap-6">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/projects">Projects</a>
-            <a href="/services">Services</a>
-        </div>
-    </header>
+				<section id="featured-project">
+					<h2>Featured Project</h2>
+					<hr class="mb-4" />
+				</section>
 
-    <div class="content">
+				<section class="gap-6" id="skills">
+					<div class="flex flex-col gap-1.5">
+						<h2>Skills</h2>
+						<hr />
+					</div>
 
-        <!-- HERO -->
+					<section id="langs">
+						<h3>Languages</h3>
+						<hr />
 
-        <div class="hero">
-            <img alt="Profile Image" class="w-50 border-4 border-forge-surface" src="/imgs/profile.jpeg">
-            <h1 class="text-4xl">Ethan Illingsworth</h1>
-            <h2 class="text-forge-subtext text-2xl">Aspiring Web Developer</h2>
-            <div class="flex-row flex gap-3 text-base">
-                <a class="badge bg-black" href="https://github.com/ethanillingsworth" target="_blank">
-                    <img alt="Github Icon" class="icon" src="icons/github.svg">
-                    <span>Github</span>
-                </a>
-                <a class="badge bg-[#0077B5]" href="https://linkedin.com/in/ethanillingsworth" target="_blank">
-                    <img alt="Linkedin Icon" class="icon" src="icons/linkedin.svg">
-                    <span>Linkedin</span>
-                </a>
-                <a class="badge bg-red-500" href="mailto:illingsworth.ethan@gmail.com" target="_blank">
-                    <img alt="Email Icon" class="icon" src="icons/email.svg">
-                    <span>Email Me</span>
-                </a>
-            </div>
-        </div>
+						<div
+							class="grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
+						>
+							<div class="card">
+								<h4>
+									HTML5
+									<span
+										class="float-right font-normal text-base"
+										>90%</span
+									>
+								</h4>
+								<progress
+									value="90"
+									max="100"
+									class="text-orange-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>4+ years</span
+									>
+								</h5>
+								<p>
+									The foundation of every project I build. I
+									write clean, semantic markup for structure
+									and accessibility.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									JavaScript
+									<span
+										class="float-right font-normal text-base"
+										>85%</span
+									>
+								</h4>
+								<progress
+									value="85"
+									max="100"
+									class="text-yellow-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>4+ years</span
+									>
+								</h5>
+								<p>
+									A core language for web development. I use
+									it daily to build dynamic UIs and browser
+									logic.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+									<span
+										class="text-green-300 bg-green-500/50 tag"
+										>Backend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									CSS3
+									<span
+										class="float-right font-normal text-base"
+										>80%</span
+									>
+								</h4>
+								<progress
+									value="80"
+									max="100"
+									class="text-blue-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>4+ years</span
+									>
+								</h5>
+								<p>
+									Styling layouts with utility-first
+									approaches like Tailwind and custom styles
+									when needed.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
 
-        <section id="about" tabindex="0">
-            <h2>About Me</h2>
-            <hr />
-            <p class="text-lg text-forge-text">At heart I'm a developer who aims to make helpful software. I'm currently working with tools like Webpack, TailwindCSS, and jQuery to make that dream come true.
-                I am currently a Junior in highschool trying to make 10 year old me's dreams a reality, one line of code at a time.
-                I like to keep my projects organized, even if my life currently isnt. I work on projects I believe in. You should too.
-            </p>
-        </section>
+							<div class="card">
+								<h4>
+									Python
+									<span
+										class="float-right font-normal text-base"
+										>75%</span
+									>
+								</h4>
+								<progress
+									value="75"
+									max="100"
+									class="text-sky-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>3+ years</span
+									>
+								</h5>
+								<p>
+									Used for scripting, automation, and
+									packaging tools like JSave. I also use it
+									for backend logic.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-green-300 bg-green-500/50 tag"
+										>Backend</span
+									>
+								</div>
+							</div>
 
-        <section id="featured-project">
-            <h2>Featured Project</h2>
-            <hr class="mb-4" />
-        </section>
+							<div class="card">
+								<h4>
+									Java
+									<span
+										class="float-right font-normal text-base"
+										>40%</span
+									>
+								</h4>
+								<progress
+									value="40"
+									max="100"
+									class="text-red-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>1 year</span
+									>
+								</h5>
+								<p>
+									Mostly used in academic environments or for
+									learning purposes. Basic understanding of
+									OOP and syntax.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-green-300 bg-green-500/50 tag"
+										>Backend</span
+									>
+								</div>
+							</div>
 
-        <section id="featured-blog-post">
-            <h2>Featured Blog Post</h2>
-            <hr />
-        </section>
+							<div class="card">
+								<h4>
+									Swift
+									<span
+										class="float-right font-normal text-base"
+										>30%</span
+									>
+								</h4>
+								<progress
+									value="30"
+									max="100"
+									class="text-orange-400/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>< 1 year</span
+									>
+								</h5>
+								<p>
+									Some exposure from experimenting with iOS
+									development. Still early in the learning
+									phase.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+						</div>
+					</section>
 
-        <section class="gap-6" id="skills">
-            <div class="flex flex-col gap-1.5">
-                <h2>Skills</h2>
-                <hr />
-            </div>
+					<section id="tools">
+						<h3>Tools & Frameworks</h3>
+						<hr />
+						<div
+							class="grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
+						>
+							<div class="card">
+								<h4>
+									JSON
+									<span
+										class="float-right font-normal text-base"
+										>90%</span
+									>
+								</h4>
+								<progress
+									value="90"
+									max="100"
+									class="text-amber-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>4+ years</span
+									>
+								</h5>
+								<p>
+									Widely used for backend APIs and config
+									files. I'm highly comfortable working with
+									structured JSON data in both web and server
+									environments.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+									<span
+										class="text-green-300 bg-green-500/50 tag"
+										>Backend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									Tailwind CSS
+									<span
+										class="float-right font-normal text-base"
+										>85%</span
+									>
+								</h4>
+								<progress
+									value="85"
+									max="100"
+									class="text-cyan-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>3+ years</span
+									>
+								</h5>
+								<p>
+									Utility-first CSS framework I use to build
+									responsive, maintainable styles quickly.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									jQuery
+									<span
+										class="float-right font-normal text-base"
+										>80%</span
+									>
+								</h4>
+								<progress
+									value="80"
+									max="100"
+									class="text-purple-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>4+ years</span
+									>
+								</h5>
+								<p>
+									Classic JS library for DOM manipulation and
+									UI effects, integrated into several
+									projects.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									Webpack
+									<span
+										class="float-right font-normal text-base"
+										>70%</span
+									>
+								</h4>
+								<progress
+									value="70"
+									max="100"
+									class="text-gray-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>2+ years</span
+									>
+								</h5>
+								<p>
+									Module bundler and build tool, used to
+									optimize assets and streamline frontend
+									workflows.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									Firebase
+									<span
+										class="float-right font-normal text-base"
+										>65%</span
+									>
+								</h4>
+								<progress
+									value="65"
+									max="100"
+									class="text-rose-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>1+ years</span
+									>
+								</h5>
+								<p>
+									Backend-as-a-service platform for realtime
+									data, authentication, and hosting.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-green-300 bg-green-500/50 tag"
+										>Backend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									Python Packaging (Poetry)
+									<span
+										class="float-right font-normal text-base"
+										>60%</span
+									>
+								</h4>
+								<progress
+									value="60"
+									max="100"
+									class="text-emerald-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>2+ years</span
+									>
+								</h5>
+								<p>
+									Dependency management and packaging tool for
+									Python projects, improving workflow and
+									publishing.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-green-300 bg-green-500/50 tag"
+										>Backend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									SwiftUI
+									<span
+										class="float-right font-normal text-base"
+										>30%</span
+									>
+								</h4>
+								<progress
+									value="30"
+									max="100"
+									class="text-indigo-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>< 1 year</span
+									>
+								</h5>
+								<p>
+									Declarative UI framework for building iOS
+									apps, currently exploring and learning.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+							<div class="card">
+								<h4>
+									React
+									<span
+										class="float-right font-normal text-base"
+										>20%</span
+									>
+								</h4>
+								<progress
+									value="20"
+									max="100"
+									class="text-teal-500/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>< 1 year</span
+									>
+								</h5>
+								<p>
+									Component-based UI library for building
+									interactive interfaces and single-page apps.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-blue-300 bg-blue-500/50 tag"
+										>Frontend</span
+									>
+								</div>
+							</div>
+						</div>
+					</section>
 
-            <section id="langs">
-                <h3>Languages</h3>
-                <hr />
-                
-                <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
-                    <div class="card">
-                        <h4>HTML5 <span class="float-right font-normal text-base">90%</span></h4>
-                        <progress value="90" max="100" class="text-orange-500/75"></progress>
-                        <h5>Experience:<span class="float-right">4+ years</span></h5>
-                        <p>The foundation of every project I build. I write clean, semantic markup for structure and accessibility.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>JavaScript <span class="float-right font-normal text-base">85%</span></h4>
-                        <progress value="85" max="100" class="text-yellow-500/75"></progress>
-                        <h5>Experience:<span class="float-right">4+ years</span></h5>
-                        <p>A core language for web development. I use it daily to build dynamic UIs and browser logic.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                            <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>CSS3 <span class="float-right font-normal text-base">80%</span></h4>
-                        <progress value="80" max="100" class="text-blue-500/75"></progress>
-                        <h5>Experience:<span class="float-right">4+ years</span></h5>
-                        <p>Styling layouts with utility-first approaches like Tailwind and custom styles when needed.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
+					<section id="workflow">
+						<h3>Development Workflow</h3>
+						<hr />
+						<div
+							class="grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
+						>
+							<div class="card">
+								<h4>
+									VS Code
+									<span
+										class="float-right font-normal text-base"
+										>85%</span
+									>
+								</h4>
+								<progress
+									value="85"
+									max="100"
+									class="text-yellow-400/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>3+ years</span
+									>
+								</h5>
+								<p>
+									My main code editor, fully customized with
+									extensions and shortcuts for efficient
+									development.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-yellow-300 bg-yellow-500/50 tag"
+										>Workflow</span
+									>
+								</div>
+							</div>
 
-                    <div class="card">
-                        <h4>Python <span class="float-right font-normal text-base">75%</span></h4>
-                        <progress value="75" max="100" class="text-sky-500/75"></progress>
-                        <h5>Experience:<span class="float-right">3+ years</span></h5>
-                        <p>Used for scripting, automation, and packaging tools like JSave. I also use it for backend logic.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-                        </div>
-                    </div>
+							<div class="card">
+								<h4>
+									Git & GitHub
+									<span
+										class="float-right font-normal text-base"
+										>80%</span
+									>
+								</h4>
+								<progress
+									value="80"
+									max="100"
+									class="text-yellow-400/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>4+ years</span
+									>
+								</h5>
+								<p>
+									Version control and collaboration platform —
+									used daily for managing projects and
+									codebases.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-yellow-300 bg-yellow-500/50 tag"
+										>Workflow</span
+									>
+								</div>
+							</div>
 
-                    <div class="card">
-                        <h4>Java <span class="float-right font-normal text-base">40%</span></h4>
-                        <progress value="40" max="100" class="text-red-500/75"></progress>
-                        <h5>Experience:<span class="float-right">1 year</span></h5>
-                        <p>Mostly used in academic environments or for learning purposes. Basic understanding of OOP and syntax.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-                        </div>
-                    </div>
+							<div class="card">
+								<h4>
+									NPM
+									<span
+										class="float-right font-normal text-base"
+										>75%</span
+									>
+								</h4>
+								<progress
+									value="75"
+									max="100"
+									class="text-yellow-400/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>3+ years</span
+									>
+								</h5>
+								<p>
+									Package manager for JavaScript, managing
+									dependencies and running scripts seamlessly.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-yellow-300 bg-yellow-500/50 tag"
+										>Workflow</span
+									>
+								</div>
+							</div>
 
-                    <div class="card">
-                        <h4>Swift <span class="float-right font-normal text-base">30%</span></h4>
-                        <progress value="30" max="100" class="text-orange-400/75"></progress>
-                        <h5>Experience:<span class="float-right">< 1 year</span></h5>
-                        <p>Some exposure from experimenting with iOS development. Still early in the learning phase.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
-
-            <section id="tools">
-                <h3>Tools & Frameworks</h3>
-                <hr />
-                <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
-                    <div class="card">
-                        <h4>JSON <span class="float-right font-normal text-base">90%</span></h4>
-                        <progress value="90" max="100" class="text-amber-500/75"></progress>
-                        <h5>Experience:<span class="float-right">4+ years</span></h5>
-                        <p>Widely used for backend APIs and config files. I'm highly comfortable working with structured JSON data in both web and server environments.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                            <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>Tailwind CSS <span class="float-right font-normal text-base">85%</span></h4>
-                        <progress value="85" max="100" class="text-cyan-500/75"></progress>
-                        <h5>Experience:<span class="float-right">3+ years</span></h5>
-                        <p>Utility-first CSS framework I use to build responsive, maintainable styles quickly.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>jQuery <span class="float-right font-normal text-base">80%</span></h4>
-                        <progress value="80" max="100" class="text-purple-500/75"></progress>
-                        <h5>Experience:<span class="float-right">4+ years</span></h5>
-                        <p>Classic JS library for DOM manipulation and UI effects, integrated into several projects.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>Webpack <span class="float-right font-normal text-base">70%</span></h4>
-                        <progress value="70" max="100" class="text-gray-500/75"></progress>
-                        <h5>Experience:<span class="float-right">2+ years</span></h5>
-                        <p>Module bundler and build tool, used to optimize assets and streamline frontend workflows.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>Firebase <span class="float-right font-normal text-base">65%</span></h4>
-                        <progress value="65" max="100" class="text-rose-500/75"></progress>
-                        <h5>Experience:<span class="float-right">1+ years</span></h5>
-                        <p>Backend-as-a-service platform for realtime data, authentication, and hosting.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>Python Packaging (Poetry) <span class="float-right font-normal text-base">60%</span></h4>
-                        <progress value="60" max="100" class="text-emerald-500/75"></progress>
-                        <h5>Experience:<span class="float-right">2+ years</span></h5>
-                        <p>Dependency management and packaging tool for Python projects, improving workflow and publishing.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-green-300 bg-green-500/50 tag">Backend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>SwiftUI <span class="float-right font-normal text-base">30%</span></h4>
-                        <progress value="30" max="100" class="text-indigo-500/75"></progress>
-                        <h5>Experience:<span class="float-right">< 1 year</span></h5>
-                        <p>Declarative UI framework for building iOS apps, currently exploring and learning.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h4>React <span class="float-right font-normal text-base">20%</span></h4>
-                        <progress value="20" max="100" class="text-teal-500/75"></progress>
-                        <h5>Experience:<span class="float-right">< 1 year</span></h5>
-                        <p>Component-based UI library for building interactive interfaces and single-page apps.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <section id="workflow">
-                <h3>Development Workflow</h3>
-                <hr />
-                <div class="grid grid-cols-3 grid-flow-row pt-4 gap-6">
-                    <div class="card">
-                        <h4>VS Code <span class="float-right font-normal text-base">85%</span></h4>
-                        <progress value="85" max="100" class="text-yellow-400/75"></progress>
-                        <h5>Experience:<span class="float-right">3+ years</span></h5>
-                        <p>My main code editor, fully customized with extensions and shortcuts for efficient development.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-yellow-300 bg-yellow-500/50 tag">Workflow</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h4>Git & GitHub <span class="float-right font-normal text-base">80%</span></h4>
-                        <progress value="80" max="100" class="text-yellow-400/75"></progress>
-                        <h5>Experience:<span class="float-right">4+ years</span></h5>
-                        <p>Version control and collaboration platform — used daily for managing projects and codebases.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-yellow-300 bg-yellow-500/50 tag">Workflow</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h4>NPM <span class="float-right font-normal text-base">75%</span></h4>
-                        <progress value="75" max="100" class="text-yellow-400/75"></progress>
-                        <h5>Experience:<span class="float-right">3+ years</span></h5>
-                        <p>Package manager for JavaScript, managing dependencies and running scripts seamlessly.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-yellow-300 bg-yellow-500/50 tag">Workflow</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h4>Build Configuration & Project Setup <span class="float-right font-normal text-base">70%</span></h4>
-                        <progress value="70" max="100" class="text-yellow-400/75"></progress>
-                        <h5>Experience:<span class="float-right">3+ years</span></h5>
-                        <p>Setting up and optimizing build pipelines, configuring tools like Webpack and scripts.</p>
-                        <div class="flex flex-row gap-3">
-                            <span class="text-yellow-300 bg-yellow-500/50 tag">Workflow</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-    </div>
-</body>
-
+							<div class="card">
+								<h4>
+									Build Configuration & Project Setup
+									<span
+										class="float-right font-normal text-base"
+										>70%</span
+									>
+								</h4>
+								<progress
+									value="70"
+									max="100"
+									class="text-yellow-400/75"
+								></progress>
+								<h5>
+									Experience:<span class="float-right"
+										>3+ years</span
+									>
+								</h5>
+								<p>
+									Setting up and optimizing build pipelines,
+									configuring tools like Webpack and scripts.
+								</p>
+								<div class="flex flex-row gap-3">
+									<span
+										class="text-yellow-300 bg-yellow-500/50 tag"
+										>Workflow</span
+									>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+		</div>
+	</body>
 </html>
