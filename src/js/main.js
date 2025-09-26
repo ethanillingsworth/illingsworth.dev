@@ -42,29 +42,197 @@ export class JSON {
 }
 
 export class Tag {
-	static tagColors = {
-		JavaScript: "text-yellow-300 bg-yellow-500/50",
-		HTML5: "text-orange-300 bg-orange-500/50",
-		CSS3: "text-blue-300 bg-blue-500/50",
-		"Tailwind CSS": "text-cyan-300 bg-cyan-500/50",
-		jQuery: "text-purple-300 bg-purple-500/50",
-		Webpack: "text-gray-300 bg-gray-500/50",
-		Firebase: "text-rose-300 bg-rose-500/50",
-		Python: "text-sky-300 bg-sky-500/50",
-		Java: "text-red-300 bg-red-500/50",
-		Swift: "text-orange-200 bg-orange-400/50",
-		"Python Packaging (Poetry)": "text-emerald-300 bg-emerald-500/50",
-		SwiftUI: "text-indigo-300 bg-indigo-500/50",
-		React: "text-teal-300 bg-teal-500/50",
-		JSON: "text-amber-300 bg-amber-500/50",
-		Markdown: "text-gray-500 bg-gray-700/50",
-		Backend: "text-green-300 bg-green-500/50",
-		Frontend: "text-blue-300 bg-blue-500/50",
-		Other: "text-gray-400 bg-gray-600/50",
+	/** @type {{string: Tag}} */
+	static tags = {
+		JavaScript: new Tag(
+			"JavaScript",
+			"yellow-300",
+			"yellow-500",
+			90,
+			"+4",
+			"Core language of the web, versatile and essential for frontend and backend development.",
+			["Frontend", "Backend"]
+		),
+		HTML5: new Tag(
+			"HTML5",
+			"orange-300",
+			"orange-500",
+			90,
+			"+4",
+			"Markup language for structuring content on the web.",
+			["Frontend"]
+		),
+		CSS3: new Tag(
+			"CSS3",
+			"blue-300",
+			"blue-500",
+			80,
+			"+4",
+			"Stylesheet language used to design and layout web pages.",
+			["Frontend"]
+		),
+		"Tailwind CSS": new Tag(
+			"Tailwind CSS",
+			"cyan-300",
+			"cyan-500",
+			85,
+			"+3",
+			"Utility-first CSS framework for rapidly building custom designs.",
+			["Frontend"]
+		),
+		jQuery: new Tag(
+			"jQuery",
+			"purple-300",
+			"purple-500",
+			80,
+			"+4",
+			"JavaScript library that simplifies DOM manipulation and event handling.",
+			["Frontend"]
+		),
+		Webpack: new Tag(
+			"Webpack",
+			"gray-300",
+			"gray-500",
+			70,
+			"+2",
+			"Module bundler for JavaScript applications, useful for modern workflows.",
+			["Frontend"]
+		),
+		Firebase: new Tag(
+			"Firebase",
+			"rose-300",
+			"rose-500",
+			65,
+			"+2",
+			"Backend-as-a-service platform with hosting, authentication, and databases.",
+			["Backend"]
+		),
+		Python: new Tag(
+			"Python",
+			"sky-300",
+			"sky-500",
+			75,
+			"+3",
+			"High-level general-purpose language popular in scripting, AI, and data science.",
+			["Backend"]
+		),
+		Java: new Tag(
+			"Java",
+			"red-300",
+			"red-500",
+			40,
+			"1",
+			"Object-oriented programming language widely used for enterprise and Android apps.",
+			["Backend"]
+		),
+		Swift: new Tag(
+			"Swift",
+			"orange-200",
+			"orange-400",
+			30,
+			"< 1",
+			"Modern programming language for iOS and macOS app development.",
+			["Frontend"]
+		),
+		"Python Packaging (Poetry)": new Tag(
+			"Python Packaging (Poetry)",
+			"emerald-300",
+			"emerald-500",
+			60,
+			"+2",
+			"Dependency management and packaging tool for Python projects.",
+			["Backend"]
+		),
+		SwiftUI: new Tag(
+			"SwiftUI",
+			"indigo-300",
+			"indigo-500",
+			30,
+			"< 1",
+			"Apple's declarative framework for building iOS, macOS, and watchOS UIs.",
+			["Frontend"]
+		),
+		React: new Tag(
+			"React",
+			"teal-300",
+			"teal-500",
+			20,
+			"< 1",
+			"JavaScript library for building user interfaces with components.",
+			["Frontend"]
+		),
+		JSON: new Tag(
+			"JSON",
+			"amber-300",
+			"amber-500",
+			90,
+			"+4",
+			"Lightweight data-interchange format widely used for APIs and configuration.",
+			["Frontend", "Backend"]
+		),
+		Markdown: new Tag(
+			"Markdown",
+			"gray-500",
+			"gray-700",
+			70,
+			"+4",
+			"Plain-text formatting syntax commonly used for documentation and content.",
+			["Frontend", "Backend"]
+		),
+		Backend: new Tag("Backend", "green-300", "green-500"),
+		Frontend: new Tag("Frontend", "blue-300", "blue-500"),
+		Other: new Tag("Other", "gray-400", "gray-600"),
 	};
 
-	static getElement(tag) {
-		return $(`<span class="${Tag.tagColors[tag]} tag">${tag}</span>`);
+	constructor(
+		name,
+		text,
+		bg,
+		percent = null,
+		exp = null,
+		desc = null,
+		tags = []
+	) {
+		this.name = name;
+		this.text = text;
+		this.bg = bg;
+		this.percent = percent;
+		this.exp = exp;
+		this.desc = desc;
+		this.tags = tags;
+	}
+
+	static get(tagName) {
+		return Tag.tags[tagName];
+	}
+
+	static getTag(tag) {
+		return $(
+			`<span class="text-${Tag.tags[tag].text} bg-${Tag.tags[tag].bg}/50 tag">${tag}</span>`
+		);
+	}
+
+	static getCard(tag) {
+		return `<div class="card">
+			<h4>
+				${tag.name}
+				<span class="float-right font-normal text-base">${tag.percent}%</span>
+			</h4>
+			<progress
+				value="${tag.percent}"
+				max="100"
+				class="text-${tag.bg}"
+			></progress>
+			<h5>
+				Experience:<span class="float-right">${tag.exp} Years</span>
+			</h5>
+			<p>
+				${tag.desc}
+			</p>
+			<div class="flex flex-row gap-3">
+				<span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
+			</div>
+		</div>`;
 	}
 }
 
@@ -121,7 +289,7 @@ export class Project {
 		const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap");
 		data.tags.sort();
 		for (const tag of data.tags) {
-			tags.append(Tag.getElement(tag));
+			tags.append(Tag.getTag(tag));
 		}
 
 		const githubButton =
@@ -222,7 +390,7 @@ export class BlogPost {
 		const tags = $("<div/>").addClass("flex flex-row gap-3 flex-wrap");
 		data.tags.sort();
 		for (const tag of data.tags) {
-			tags.append(Tag.getElement(tag));
+			tags.append(Tag.getTag(tag));
 		}
 		content.append(heading, desc, tags);
 

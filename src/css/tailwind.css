@@ -13,6 +13,8 @@
 	--color-forge-gold: #f4c06d;
 }
 
+@source inline('{text,bg}-{slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}{/50,}');
+
 @utility badge {
 	@apply p-3 rounded-xl text-white flex flex-row gap-1.5 place-content-center place-items-center hover:scale-105 select-none font-bold transition-transform;
 }
@@ -30,7 +32,7 @@
 }
 
 @utility hero-image {
-	@apply absolute inset-0 bg-cover bg-center filter brightness-50 blur-xs;
+	@apply absolute inset-0 h-full w-full object-cover filter rounded-none brightness-50 blur-xs;
 }
 
 @utility content {
