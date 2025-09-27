@@ -5,17 +5,13 @@ const projects = new Section("Projects");
 
 const active = new SubSection("Active");
 
-const activeRow = $("<div/>").addClass(
-	"grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
-);
+const activeRow = $("<div/>").addClass("dynamic-grid");
 
 active.addElement(activeRow);
 
 const archive = new SubSection("Archived");
 
-const archiveRow = $("<div/>").addClass(
-	"grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
-);
+const archiveRow = $("<div/>").addClass("dynamic-grid");
 
 archive.addElement(archiveRow);
 

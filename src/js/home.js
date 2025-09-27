@@ -22,9 +22,7 @@ const skills = new Section("Skills");
 
 const languagesSection = new SubSection("Languages");
 
-const langGrid = $("<div/>").addClass(
-	"grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
-);
+const langGrid = $("<div/>").addClass("dynamic-grid");
 
 languagesSection.addElement(langGrid);
 
@@ -52,9 +50,7 @@ for (const lang of langs) {
 
 const frameworksSection = new SubSection("Frameworks");
 
-const frameGrid = $("<div/>").addClass(
-	"grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
-);
+const frameGrid = $("<div/>").addClass("dynamic-grid");
 
 frameworksSection.addElement(frameGrid);
 
@@ -85,9 +81,7 @@ for (const framework of frameworks) {
 
 const devSection = new SubSection("Development Workflow");
 
-const devGrid = $("<div/>").addClass(
-	"grid grid-cols-1 md:grid-cols-3 grid-flow-row pt-4 gap-6"
-);
+const devGrid = $("<div/>").addClass("dynamic-grid");
 
 devSection.addElement(devGrid);
 
