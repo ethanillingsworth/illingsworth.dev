@@ -53,6 +53,20 @@
             "CSS3"
         ]
     },
+    "lokal": {
+        "title": "Lokal",
+        "desc": "A web app that helped schools keep their club events and activites organized.",
+        "github": "https://github.com/ethanillingsworth/Lokal",
+        "web": "https://lokalevents.com",
+        "archived": true,
+        "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "jQuery",
+            "Firebase"
+        ]
+    },
     "stretches-swift": {
         "title": "Stretches (Swift)",
         "desc": "An app that streches out your larger goals into smaller ones.",
