@@ -179,8 +179,36 @@ export class Tag {
 			"Plain-text formatting syntax commonly used for documentation and content.",
 			["Frontend", "Backend"]
 		),
+		VSCode: new Tag(
+			"VSCode",
+			"blue-500",
+			"blue-600",
+			85,
+			"+4",
+			"My main code editor, fully customized with extensions and shortcuts for efficient development.",
+			["Workflow"]
+		),
+		Github: new Tag(
+			"Github",
+			"gray-200",
+			"black",
+			80,
+			"+4",
+			"Version control and collaboration platform — used daily for managing projects and codebases.",
+			["Workflow"]
+		),
+		NPM: new Tag(
+			"NPM",
+			"red-600",
+			"red-700",
+			75,
+			"+3",
+			"Package manager for JavaScript, managing dependencies and running scripts seamlessly.",
+			["Workflow"]
+		),
 		Backend: new Tag("Backend", "green-300", "green-500"),
 		Frontend: new Tag("Frontend", "blue-300", "blue-500"),
+		Workflow: new Tag("Workflow", "yellow-300", "yellow-500"),
 		Other: new Tag("Other", "gray-400", "gray-600"),
 	};
 
@@ -213,26 +241,61 @@ export class Tag {
 	}
 
 	static getCard(tag) {
-		return `<div class="card">
-			<h4>
-				${tag.name}
-				<span class="float-right font-normal text-base">${tag.percent}%</span>
-			</h4>
-			<progress
+		const card = $("<div/>").addClass("card");
+
+		const head = $("<h4/>").html(`${tag.name}
+				<span class="float-right font-normal text-base">${tag.percent}%</span>`);
+
+		const progress = $(`<progress
 				value="${tag.percent}"
 				max="100"
 				class="text-${tag.bg}"
-			></progress>
-			<h5>
-				Experience:<span class="float-right">${tag.exp} Years</span>
-			</h5>
-			<p>
-				${tag.desc}
-			</p>
-			<div class="flex flex-row gap-3">
-				<span class="text-blue-300 bg-blue-500/50 tag">Frontend</span>
-			</div>
-		</div>`;
+			></progress>`);
+
+		const exp = $("<h5/>").html(
+			`Experience:<span class="float-right">${tag.exp} Years</span>`
+		);
+
+		const desc = $("<p/>").text(tag.desc);
+
+		const tags = $("<div/>").addClass("flex flex-row gap-3");
+
+		for (const tName of tag.tags) {
+			tags.append(Tag.getTag(tName));
+		}
+
+		card.append(head, progress, exp, desc, tags);
+		return card;
+	}
+}
+
+export class SectionTemplate {
+	constructor(name, heading, parent) {
+		this.sec = $("<section/>").attr("tabindex", "0");
+
+		this.sec.append($(`<${heading}/>`).text(name));
+		this.sec.append($("<hr/>"));
+	}
+
+	addElement(element) {
+		this.sec.append(element);
+	}
+}
+
+export class Section extends SectionTemplate {
+	constructor(name) {
+		super(name, "h2");
+		$(".sections").append(this.sec);
+	}
+
+	addSection(section) {
+		this.sec.append(section.sec);
+	}
+}
+
+export class SubSection extends SectionTemplate {
+	constructor(name) {
+		super(name, "h3");
 	}
 }
 
