@@ -2,7 +2,7 @@ import $ from "jquery";
 import "../css/tailwind.css";
 import { marked } from "marked";
 
-const header = $("<header/>").addClass("nav").html(`<a href="/">
+$("header").addClass("nav").html(`<a href="/">
                 <img src="imgs/logo.png" />
             </a>
             <hr class="border-forge-accent" />
@@ -26,8 +26,6 @@ const header = $("<header/>").addClass("nav").html(`<a href="/">
                     alt="Services"
                 />
             </a>`);
-
-$(document.body).prepend(header);
 
 export class JSON {
 	/**

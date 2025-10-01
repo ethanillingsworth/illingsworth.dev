@@ -26,7 +26,7 @@
 }
 
 @utility nav {
-	@apply sticky top-0 place-items-center w-16 flex flex-col z-10 min-h-full gap-6 border-r-forge-accent bg-black border-r-2 py-6 px-3 text-xl font-bold;
+	@apply sticky top-0 place-items-center flex flex-col z-10 min-h-full gap-6 border-r-forge-accent bg-black border-r-2 py-6 px-3 text-xl font-bold;
 }
 
 @utility hero {
@@ -77,6 +77,10 @@
 @layer base {
 	body {
 		@apply bg-forge-background text-forge-text flex flex-row h-dvh scheme-only-dark accent-forge-accent;
+	}
+
+	header {
+		@apply w-16
 	}
 
 	.nav img {
