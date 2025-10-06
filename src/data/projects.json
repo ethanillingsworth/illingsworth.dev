@@ -55,7 +55,7 @@
     },
     "lokal": {
         "title": "Lokal",
-        "desc": "A web app that helped schools keep their club events and activites organized.",
+        "desc": "A web app that helped schools keep their club events and activities organized.",
         "github": "https://github.com/ethanillingsworth/Lokal",
         "web": "https://lokalevents.com",
         "archived": true,
@@ -67,9 +67,21 @@
             "Firebase"
         ]
     },
+    "codingrat": {
+        "title": "CodingRat",
+        "desc": "My take on CodingBat's formula, challenge packs for students to practice their coding skills on.",
+        "github": "https://github.com/ethanillingsworth/CodingRat",
+        "web": "https://codingrat.netlify.app/",
+        "archived": true,
+        "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3"
+        ]
+    },
     "stretches-swift": {
         "title": "Stretches (Swift)",
-        "desc": "An app that streches out your larger goals into smaller ones.",
+        "desc": "An app that stretches out your larger goals into smaller ones.",
         "github": "https://github.com/ethanillingsworth/Stretches-Swift",
         "archived": true,
         "tags": [
