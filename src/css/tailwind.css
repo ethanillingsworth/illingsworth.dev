@@ -26,7 +26,7 @@
 }
 
 @utility nav {
-	@apply sticky top-0 place-items-center flex flex-col z-10 min-h-full gap-6 border-r-forge-accent bg-black border-r-2 py-6 px-3 text-xl font-bold;
+	@apply sticky top-0 place-items-center flex flex-col z-10 min-h-full gap-6 border-r-forge-accent bg-black border-r-2 p-4 text-xl font-bold;
 }
 
 @utility hero {
@@ -66,12 +66,16 @@
 }
 
 @utility link-icon {
-	@apply aspect-square object-contain h-auto p-1 transition-colors;
-	@apply hover:bg-forge-background;
+	@apply aspect-square object-contain w-8;
 }
 
 @utility dynamic-grid {
 	@apply grid grid-cols-1 md:grid-cols-3 grid-flow-row gap-6;
+}
+
+@utility pullout {
+	@apply absolute bottom-2 p-1 left-full w-10 bg-forge-background border-2 border-l-0 rounded-r-2xl border-forge-accent;
+	@apply hover:cursor-pointer
 }
 
 @layer base {
@@ -80,7 +84,12 @@
 	}
 
 	header {
-		@apply w-16
+		@apply relative min-w-fit transition-transform
+	}
+
+	header a {
+		@apply flex p-2 flex-row place-content-start gap-3 place-items-center overflow-hidden w-full text-nowrap transition-colors !text-forge-text rounded-2xl;
+		@apply hover:bg-forge-accent/25;
 	}
 
 	.nav img {
@@ -129,9 +138,11 @@
 	h1 {
 		@apply text-3xl;
 	}
+
 	h2 {
 		@apply text-2xl;
 	}
+
 	h3 {
 		@apply text-xl;
 	}

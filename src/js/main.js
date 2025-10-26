@@ -2,13 +2,14 @@ import $ from "jquery";
 import "../css/tailwind.css";
 import { marked } from "marked";
 
-$("header").addClass("nav").html(`<a href="/">
-                <img src="imgs/logo.png" />
+$("header").addClass("nav").html(`<a href="/" class=" w-auto">
+                <img class="link-icon" id="logo" src="imgs/logo.png" />
             </a>
             <hr class="border-forge-accent" />
 
             <a href="/">
                 <img class="link-icon" src="/icons/home.svg" alt="Home Page" />
+				<h3 class="hidden">Home Page</h3>
             </a>
 
             <a href="/projects">
@@ -17,15 +18,39 @@ $("header").addClass("nav").html(`<a href="/">
                     src="/icons/projects.svg"
                     alt="Projects"
                 />
+				<h3 class="hidden">Projects</h3>
             </a>
 
-            <a href="/services">
+            <a href="/services"">
                 <img
                     class="link-icon"
                     src="/icons/services.svg"
                     alt="Services"
                 />
-            </a>`);
+				<h3 class="hidden">Services</h3>
+            </a>
+			
+			<div class="pullout">
+				<img src="/icons/expand.svg" class="transition-all" alt="Expand">
+			</div>
+			
+			`);
+
+
+let expanded = false
+
+$(".pullout").on("click", () => {
+	if (!expanded) {
+		$(".pullout img").addClass("rotate-180")
+		$("header a h3").removeClass("hidden")
+	}
+	else {
+		$(".pullout img").removeClass("rotate-180")
+		$("header a h3").addClass("hidden")
+	}
+
+	expanded = !expanded
+})
 
 export class JSON {
 	/**
