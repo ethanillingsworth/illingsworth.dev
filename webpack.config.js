@@ -50,10 +50,10 @@ export default {
 		liveReload: true, // fallback auto-reload if HMR fails
 		historyApiFallback: {
 			rewrites: [
-				// {
-				//     from: /^\/post\/[^\/]+(?:\/.*)?$/, // match /post/anything (+ optional trailing slash/segments)
-				//     to: '/pages/post.html',
-				// },
+				{
+					from: /^\/post\/[^\/]+(?:\/.*)?$/, // match /post/anything (+ optional trailing slash/segments)
+					to: '/pages/post.html',
+				},
 				{
 					from: /^\/([^\/]+)$/, // match /anything
 					to: (context) => `/pages/${context.match[1]}.html`,
@@ -118,12 +118,12 @@ export default {
 			chunks: ["projects"],
 			favicon: "./src/imgs/logo.png",
 		}),
-		// new HtmlWebpackPlugin({
-		// 	template: "./src/pages/blog.html",
-		// 	filename: "pages/blog.html",
-		// 	chunks: ["blog"],
-		// 	favicon: "./src/imgs/logo.png",
-		// }),
+		new HtmlWebpackPlugin({
+			template: "./src/pages/blog.html",
+			filename: "pages/blog.html",
+			chunks: ["blog"],
+			favicon: "./src/imgs/logo.png",
+		}),
 		new HtmlWebpackPlugin({
 			template: "./src/pages/post.html",
 			filename: "pages/post.html",

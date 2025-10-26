@@ -13,17 +13,7 @@
 
 <body>
     <!-- NAV -->
-    <header class="nav">
-        <a href="/">illingsworth.dev</a>
-        <hr class="vertical border-forge-accent" />
-        <a href="#posts">Posts</a>
-
-        <div class="flex flex-row ml-auto gap-6">
-            <a href="/">Home</a>
-            <a href="/blog">Blog</a>
-            <a href="/projects">Projects</a>
-            <a href="/services">Services</a>
-        </div>
+    <header>
     </header>
 
     <div class="content">
@@ -31,17 +21,19 @@
         <!-- HERO -->
 
         <div class="hero">
-            <img alt="Profile Image" class="w-50 border-4 border-forge-surface" src="/imgs/profile.jpeg">
-            <h1 class="text-4xl">My Blog</h1>
-            <h2 class="text-forge-subtext text-xl">Scroll down to see some of my posts.</h2>
-            
+            <img class="-z-10 hero-image" src="/imgs/backdrops/home.webp" loading="eager" />
+            <h1 class="text-3xl md:text-4xl">My Blog</h1>
+            <h2 class="text-forge-subtext text-xl md:text-2xl">
+                Scroll down to see all my posts.
+            </h2>
         </div>
-
-        <section id="posts">
-            <h2 class="text-3xl">Posts</h2>
-            <hr />
-            <div class="grid grid-cols-3 grid-flow-row gap-6" id="posts-row"></div>
-        </section>
+        <div class="sections">
+            <section id="posts">
+                <h2 class="text-3xl">Posts</h2>
+                <hr />
+                <div class="grid grid-cols-3 grid-flow-row gap-6" id="posts-row"></div>
+            </section>
+        </div>
     </div>
 </body>
 

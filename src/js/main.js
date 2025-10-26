@@ -3,7 +3,7 @@ import "../css/tailwind.css";
 import { marked } from "marked";
 
 $("header").addClass("nav").html(`<a href="/" class=" w-auto">
-                <img class="link-icon" id="logo" src="imgs/logo.png" />
+                <img class="link-icon" id="logo" src="/imgs/logo.png" />
             </a>
             <hr class="border-forge-accent" />
 
@@ -19,6 +19,15 @@ $("header").addClass("nav").html(`<a href="/" class=" w-auto">
                     alt="Projects"
                 />
 				<h3 class="hidden">Projects</h3>
+            </a>
+
+			<a href="/blog"">
+                <img
+                    class="link-icon"
+                    src="/icons/blog.svg"
+                    alt="Blog"
+                />
+				<h3 class="hidden">My Blog</h3>
             </a>
 
             <a href="/services"">
