@@ -16,6 +16,21 @@
             "JSON"
         ]
     },
+    "badgelab": {
+        "title": "BadgeLab",
+        "desc": "A collection of API endpoints to simplify GitHub README badges.",
+        "github": "https://github.com/ethanillingsworth/BadgeLab",
+        "web": "https://badgelab.dev",
+        "tags": [
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Tailwind CSS",
+            "jQuery",
+            "Webpack",
+            "JSON"
+        ]
+    },
     "illingsworth.dev": {
         "title": "illingsworth.dev",
         "desc": "A home for all my projects, posts, info, and everything else.",
