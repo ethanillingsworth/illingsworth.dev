@@ -2,7 +2,7 @@
     "syntaxforge": {
         "featured": true,
         "title": "SyntaxForge",
-        "desc": "SyntaxForge helps beginners and advanced coders master programming skills at their own pace.",
+        "desc": "A playform helping new and existing coders master programming skills. With a variety of courses, multiple question types, and your very own playground to make your own projects. SyntaxForge helps you unleash your coding skills.",
         "github": "https://github.com/ethanillingsworth/SyntaxForge",
         "web": "https://syntaxforge.dev",
         "tags": [
@@ -45,7 +45,6 @@
             "Webpack",
             "Tailwind CSS"
         ]
-
     },
     "jsave": {
         "title": "JSave",
