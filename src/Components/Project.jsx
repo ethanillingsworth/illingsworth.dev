@@ -5,14 +5,15 @@ import star from "../icons/star.svg"
 export default function Project({ id, landscape = false }) {
     const data = projects[id]
     return (
-        <div className={`project gap-6 ${landscape ? "row" : ""}`}>
-            <img src={`/previews/${id}.png`} className={`${landscape ? "min-w-1/3 h-auto aspect-video" : ""}`} />
-            <hr className="h-full border w-auto" />
-            <div className="col">
+        <div className={`project ${landscape ? "row" : ""}`}>
+            <div className="aspect-video">
+                <img src={`/previews/${id}.png`} className={`${landscape ? "object-cover h-full w-full rounded-r-none" : "rounded-b-none"}`} />
+            </div>
+            <div className="col p-4 gap-3">
                 <h3>{data.title}</h3>
-                <p>{data.desc}</p>
+                <p className="line-clamp-3">{data.desc}</p>
 
-                <div className="row mt-auto">
+                <div className="row mt-auto flex-wrap">
                     {data.tags.map((tagId) => {
                         return <Tag id={tagId} />
                     })}

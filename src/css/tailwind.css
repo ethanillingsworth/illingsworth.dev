@@ -36,7 +36,7 @@
 }
 
 @utility project {
-	@apply p-6 rounded-2xl col bg-forge-surface w-full
+	@apply rounded-2xl gap-0 col bg-forge-surface w-full
 }
 
 @utility tag {
