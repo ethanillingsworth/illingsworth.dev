@@ -20,8 +20,8 @@ export default function Home() {
                         I believe in the motto of "Progress, not perfection". If you can do just 1 more day, then you can contiune working on anything.</p>
                     <div className="row mt-4 gap-6">
                         <a href="https://github.com/ethanillingsworth"><img className="badge shadow-sm shadow-white/50" src="https://badgelab.dev/api/badge/github" /></a>
-                        <a href="https://linkedin.com/in/ethanillingsworth"><img className="badge" src="https://badgelab.dev/api/badge/linkedin-white" /></a>
-                        <a href="mailto:illingsworth.ethan@gmail.com"><img className="badge" src="https://badgelab.dev/api/badge/gmail-white" /></a>
+                        <a href="https://linkedin.com/in/ethanillingsworth"><img className="badge shadow-sm shadow-white/50" src="https://badgelab.dev/api/badge/linkedin-white" /></a>
+                        <a href="mailto:illingsworth.ethan@gmail.com"><img className="badge shadow-sm shadow-white/50" src="https://badgelab.dev/api/badge/gmail-white" /></a>
 
                     </div>
                 </div>
