@@ -37,7 +37,7 @@
 	@apply h-10 hover:scale-105 transition-all
 }
 
-@utility project {
+@utility container {
 	@apply rounded-2xl gap-0 col bg-forge-surface w-full
 }
 
