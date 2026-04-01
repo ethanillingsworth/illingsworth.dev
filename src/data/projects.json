@@ -1,132 +1,101 @@
 {
-    "syntaxforge": {
-        "featured": true,
-        "title": "SyntaxForge",
-        "desc": "A platform helping new and existing coders master programming skills. With a variety of courses, multiple question types, and your very own playground to make your own projects. SyntaxForge helps you unleash your coding skills.",
-        "github": "https://github.com/ethanillingsworth/SyntaxForge",
-        "web": "https://syntaxforge.dev",
-        "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "Tailwind CSS",
-            "jQuery",
-            "Webpack",
-            "Firebase",
-            "JSON"
-        ]
-    },
-    "badgelab": {
-        "title": "BadgeLab",
-        "desc": "A collection of API endpoints to simplify GitHub README badges.",
-        "github": "https://github.com/ethanillingsworth/BadgeLab",
-        "web": "https://badgelab.dev",
-        "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "Tailwind CSS",
-            "jQuery",
-            "Webpack",
-            "JSON"
-        ]
-    },
-    "illingsworth.dev": {
-        "title": "illingsworth.dev",
-        "desc": "A home for all my projects, posts, info, and everything else.",
-        "github": "https://github.com/ethanillingsworth/illingsworth.dev",
-        "web": "https://illingsworth.dev",
-        "tags": [
-            "JavaScript",
-            "CSS3",
-            "HTML5",
-            "jQuery",
-            "JSON",
-            "Webpack",
-            "Tailwind CSS"
-        ]
-    },
-    "jsave": {
-        "title": "JSave",
-        "desc": "A simple python module for operating on mainly JSON files. While supporting other formats such as python pickling.",
-        "github": "https://github.com/ethanillingsworth/JSave",
-        "tags": [
-            "Python",
-            "Python Packaging (Poetry)",
-            "JSON"
-        ]
-    },
-    "darkpages": {
-        "title": "DarkPages",
-        "desc": "A javascript library that turns the default README.md viewer of Github Pages into a dark version.",
-        "github": "https://github.com/ethanillingsworth/DarkPages",
-        "web": "https://ethanillingsworth.github.io/DarkPages/",
-        "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3"
-        ]
-    },
-    "lokal": {
-        "title": "Lokal",
-        "desc": "A web app that helped schools keep their club events and activities organized.",
-        "github": "https://github.com/ethanillingsworth/Lokal",
-        "web": "https://lokalevents.com",
-        "archived": true,
-        "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3",
-            "jQuery",
-            "Firebase"
-        ]
-    },
-    "codingrat": {
-        "title": "CodingRat",
-        "desc": "My take on CodingBat's formula, challenge packs for students to practice their coding skills on.",
-        "github": "https://github.com/ethanillingsworth/CodingRat",
-        "web": "https://codingrat.netlify.app/",
-        "archived": true,
-        "tags": [
-            "JavaScript",
-            "HTML5",
-            "CSS3"
-        ]
-    },
-    "stretches-swift": {
-        "title": "Stretches (Swift)",
-        "desc": "An app that stretches out your larger goals into smaller ones.",
-        "github": "https://github.com/ethanillingsworth/Stretches-Swift",
-        "archived": true,
-        "tags": [
-            "Swift",
-            "SwiftUI"
-        ]
-    },
-    "microgames": {
-        "title": "MicroGames",
-        "desc": "A collection of lightweight mini-games built for quick fun and experimentation.",
-        "github": "https://github.com/ethanillingsworth/MicroGames",
-        "web": "https://microgames.illingsworth.dev/",
-        "archived": true,
-        "tags": [
-            "JavaScript",
-            "CSS3",
-            "HTML5",
-            "jQuery"
-        ]
-    },
-    "react-tac-toe": {
-        "title": "React-Tac-Toe",
-        "desc": "A Tic-Tac-Toe clone made in react, this is my first react project and was used to get my feet off the ground with react.",
-        "github": "https://github.com/ethanillingsworth/react-tac-toe",
-        "web": "https://react-tac-toe.illingsworth.dev/",
-        "archived": true,
-        "tags": [
-            "JavaScript",
-            "CSS3",
-            "HTML5",
-            "React"
-        ]
-    }
+	"syntaxforge": {
+		"featured": true,
+		"title": "SyntaxForge",
+		"desc": "A platform helping new and existing coders master programming skills. With a variety of courses, multiple question types, and your very own playground to make your own projects. SyntaxForge helps you unleash your coding skills.",
+		"github": "https://github.com/ethanillingsworth/SyntaxForge",
+		"web": "https://syntaxforge.dev",
+		"tags": [
+			"JavaScript",
+			"HTML5",
+			"CSS3",
+			"Tailwind CSS",
+			"React",
+			"Firebase",
+			"JSON"
+		]
+	},
+	"badgelab": {
+		"title": "BadgeLab",
+		"desc": "A collection of API endpoints to simplify GitHub README badges.",
+		"github": "https://github.com/ethanillingsworth/BadgeLab",
+		"web": "https://badgelab.dev",
+		"tags": [
+			"JavaScript",
+			"HTML5",
+			"CSS3",
+			"Tailwind CSS",
+			"jQuery",
+			"Webpack",
+			"Firebase",
+			"JSON"
+		]
+	},
+	"illingsworth.dev": {
+		"title": "illingsworth.dev",
+		"desc": "A home for all my projects, posts, info, and everything else.",
+		"github": "https://github.com/ethanillingsworth/illingsworth.dev",
+		"web": "https://illingsworth.dev",
+		"tags": [
+			"JavaScript",
+			"CSS3",
+			"HTML5",
+			"jQuery",
+			"JSON",
+			"Webpack",
+			"Tailwind CSS"
+		]
+	},
+	"jsave": {
+		"title": "JSave",
+		"desc": "A simple python module for operating on mainly JSON files. While supporting other formats such as python pickling.",
+		"github": "https://github.com/ethanillingsworth/JSave",
+		"tags": ["Python", "Python Packaging (Poetry)", "JSON"]
+	},
+	"darkpages": {
+		"title": "DarkPages",
+		"desc": "A javascript library that turns the default README.md viewer of Github Pages into a dark version.",
+		"github": "https://github.com/ethanillingsworth/DarkPages",
+		"web": "https://ethanillingsworth.github.io/DarkPages/",
+		"tags": ["JavaScript", "HTML5", "CSS3"]
+	},
+	"lokal": {
+		"title": "Lokal",
+		"desc": "A web app that helped schools keep their club events and activities organized.",
+		"github": "https://github.com/ethanillingsworth/Lokal",
+		"web": "https://lokalevents.com",
+		"archived": true,
+		"tags": ["JavaScript", "HTML5", "CSS3", "jQuery", "Firebase"]
+	},
+	"codingrat": {
+		"title": "CodingRat",
+		"desc": "My take on CodingBat's formula, challenge packs for students to practice their coding skills on.",
+		"github": "https://github.com/ethanillingsworth/CodingRat",
+		"web": "https://codingrat.netlify.app/",
+		"archived": true,
+		"tags": ["JavaScript", "HTML5", "CSS3"]
+	},
+	"stretches-swift": {
+		"title": "Stretches (Swift)",
+		"desc": "An app that stretches out your larger goals into smaller ones.",
+		"github": "https://github.com/ethanillingsworth/Stretches-Swift",
+		"archived": true,
+		"tags": ["Swift", "SwiftUI"]
+	},
+	"microgames": {
+		"title": "MicroGames",
+		"desc": "A collection of lightweight mini-games built for quick fun and experimentation.",
+		"github": "https://github.com/ethanillingsworth/MicroGames",
+		"web": "https://microgames.illingsworth.dev/",
+		"archived": true,
+		"tags": ["JavaScript", "CSS3", "HTML5", "jQuery"]
+	},
+	"react-tac-toe": {
+		"title": "React-Tac-Toe",
+		"desc": "A Tic-Tac-Toe clone made in react, this is my first react project and was used to get my feet off the ground with react.",
+		"github": "https://github.com/ethanillingsworth/react-tac-toe",
+		"web": "https://react-tac-toe.illingsworth.dev/",
+		"archived": true,
+		"tags": ["JavaScript", "CSS3", "HTML5", "React"]
+	}
 }

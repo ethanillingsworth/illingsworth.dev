@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 /* Borrow from SyntaxForge for now */
@@ -16,7 +16,7 @@
 
 @source inline('{text,bg}-{black,white}');
 
-@source inline('grid-cols-{1..10}');
+@source inline('{md:,}grid-cols-{1..10}');
 
 @source inline('{text,bg}-{slate,gray,zinc,neutral,stone,red,orange,amber,yellow,lime,green,emerald,teal,cyan,sky,blue,indigo,violet,purple,fuchsia,pink,rose}-{50,100,200,300,400,500,600,700,800,900,950}{/50,}');
 
@@ -28,29 +28,28 @@
 	@apply absolute inset-0 -z-30 h-full w-full object-cover filter rounded-none brightness-50 blur-xs;
 }
 
-
 @utility footer {
 	@apply p-4 border-t-2 border-t-forge-accent w-full font-bold bg-black;
 }
 
 @utility badge {
-	@apply h-10 hover:scale-105 transition-all
+	@apply h-8 border border-forge-muted hover:border-forge-accent transition-all;
 }
 
 @utility container {
-	@apply rounded-2xl gap-0 col bg-forge-surface w-full
+	@apply rounded gap-0 col bg-forge-surface w-full border-forge-muted border;
 }
 
 @utility tag {
-	@apply rounded-2xl p-1.5 px-3 font-bold text-sm;
+	@apply rounded p-1 px-1.5 h-fit font-bold;
 }
 
 @utility row {
-	@apply flex flex-row gap-3
+	@apply flex flex-row gap-2;
 }
 
 @utility col {
-	@apply flex flex-col gap-3
+	@apply flex flex-col gap-2;
 }
 
 @layer base {
@@ -59,7 +58,7 @@
 	}
 
 	#root {
-		@apply min-w-full overflow-auto
+		@apply min-w-full overflow-auto;
 	}
 
 	header {
@@ -102,7 +101,7 @@
 	}
 
 	img {
-		@apply rounded-2xl;
+		@apply rounded;
 	}
 
 	h1,
@@ -119,11 +118,11 @@
 	}
 
 	h2 {
-		@apply text-3xl;
+		@apply text-2xl;
 	}
 
 	h3 {
-		@apply text-2xl;
+		@apply text-xl;
 	}
 
 	h4 {
@@ -135,7 +134,7 @@
 	}
 
 	p {
-		@apply text-xl text-forge-subtext;
+		@apply text-base text-forge-subtext;
 	}
 
 	.nav a {
@@ -155,86 +154,98 @@
 	}
 
 	.md {
-		@apply !text-white;
-	}
+		@apply text-white! col p-20 mx-auto w-3/4;
 
-	.md h1 {
-		@apply text-4xl border-b-2 pb-3 border-forge-accent w-full;
-	}
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@apply mt-8;
+		}
 
-	.md h2 {
-		@apply text-3xl border-b-2 pb-3 border-forge-muted w-full;
-	}
+		h1 {
+			@apply text-4xl border-b-2 pb-4 border-forge-accent w-full;
+		}
 
-	.md h3 {
-		@apply text-2xl;
-	}
+		h2 {
+			@apply text-2xl border-b-2 pb-4 border-forge-muted w-full;
+		}
 
-	.md h4 {
-		@apply text-xl;
-	}
+		h3 {
+			@apply text-xl;
+		}
 
-	.md h5 {
-		@apply text-lg;
-	}
+		h4 {
+			@apply text-lg;
+		}
 
-	.md p,
-	.md ol,
-	.md ul,
-	.md table {
-		@apply text-lg whitespace-normal text-white;
-	}
+		h5 {
+			@apply text-base;
+		}
 
-	.md blockquote {
-		@apply bg-forge-surface/50 p-4 rounded-2xl;
+		p,
+		ol,
+		ul,
+		table {
+			@apply text-base whitespace-normal text-white;
+		}
+
+		blockquote {
+			@apply bg-forge-surface/50 p-4 rounded;
+		}
+
+		pre code {
+			@apply bg-forge-surface! rounded;
+		}
+
+		ul {
+			@apply list-disc list-outside pl-6;
+		}
+
+		ul ul {
+			@apply pl-8;
+		}
+
+		ol {
+			@apply list-decimal list-outside pl-6;
+		}
+
+		ol ol {
+			@apply pl-8;
+		}
+
+		a {
+			@apply text-forge-accent hover:underline;
+		}
+
+		img {
+			@apply max-w-64 max-h-64 object-cover rounded-xl inline;
+		}
+
+		blockquote p {
+			@apply text-white leading-12;
+		}
+
+		table td,
+		table th {
+			@apply p-2;
+		}
+
+		th {
+			@apply text-left;
+		}
+
+		thead {
+			@apply border-b-2 border-forge-accent;
+		}
 	}
 
 	code {
-		@apply rounded-2xl bg-forge-accent/10 p-1 px-2 text-forge-accent text-wrap text-base;
-	}
-
-	.md ul {
-		@apply list-disc list-outside pl-6;
-	}
-
-	.md ul ul {
-		@apply pl-6;
-	}
-
-	.md ol {
-		@apply list-decimal list-outside pl-6;
-	}
-
-	.md ol ol {
-		@apply pl-6;
-	}
-
-	.md a {
-		@apply text-forge-accent hover:underline;
+		@apply rounded bg-forge-accent/10 p-1 px-1.5 text-forge-accent text-wrap text-sm;
 	}
 
 	p a {
 		@apply text-forge-accent hover:underline;
-	}
-
-	.md img {
-		@apply max-w-64 max-h-64 object-cover rounded-xl inline;
-	}
-
-	.md blockquote p {
-		@apply text-white leading-12;
-	}
-
-	.md table td,
-	.md table th {
-		@apply p-2;
-	}
-
-	.md th {
-		@apply text-left;
-	}
-
-	.md thead {
-		@apply border-b-2 border-forge-accent;
 	}
 }

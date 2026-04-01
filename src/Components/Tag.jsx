@@ -1,11 +1,10 @@
-import tags from "../data/tags.json"
+import tags from "../data/tags.json";
 
-
-export default function Tag({ id }) {
-    const data = tags[id]
-    return (
-        <div className={`tag text-${data.text} bg-${data.bg}/50`}>
-            {id}
-        </div>
-    );
+export default function Tag({ id, size = "xs" }) {
+	const data = tags[id];
+	return (
+		<span className={`tag text-${data.text} text-${size} bg-${data.bg}/50`}>
+			{id}
+		</span>
+	);
 }
