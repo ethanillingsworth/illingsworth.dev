@@ -27,10 +27,10 @@ export default function Home() {
 						such as React, Firebase, and Tailwind. At the time of
 						writing this I am a Junior in high school. I enjoy
 						making clean projects that I can spend time working on.
-						I dont mind spending months or years working on a
+						I don't mind spending months or years working on a
 						project. I believe in the motto of "Progress, not
 						perfection". If you can do just 1 more day, then you can
-						contiune working on anything.
+						continue working on anything.
 					</p>
 					<div className="row mt-4 gap-4">
 						<a href="https://github.com/ethanillingsworth">
