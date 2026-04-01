@@ -1,0 +1,201 @@
+{
+    "JavaScript": {
+        "text": "yellow-300",
+        "bg": "yellow-500",
+        "level": "Expert",
+        "exp": "+4",
+        "desc": "Core language of the web, versatile and essential for frontend and backend development.",
+        "tags": [
+            "Frontend",
+            "Backend"
+        ]
+    },
+    "HTML5": {
+        "text": "orange-300",
+        "bg": "orange-500",
+        "level": "Expert",
+        "exp": "+4",
+        "desc": "Markup language for structuring content on the web.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "CSS3": {
+        "text": "blue-300",
+        "bg": "blue-500",
+        "level": "Expert",
+        "exp": "+4",
+        "desc": "Stylesheet language used to design and layout web pages.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "Tailwind CSS": {
+        "text": "cyan-300",
+        "bg": "cyan-500",
+        "level": "Expert",
+        "exp": "+3",
+        "desc": "Utility-first CSS framework for rapidly building custom designs.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "jQuery": {
+        "text": "purple-300",
+        "bg": "purple-500",
+        "level": "Expert",
+        "exp": "+4",
+        "desc": "JavaScript library that simplifies DOM manipulation and event handling.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "Webpack": {
+        "text": "gray-300",
+        "bg": "gray-500",
+        "level": "Intermediate",
+        "exp": "+2",
+        "desc": "Module bundler for JavaScript applications, useful for modern workflows.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "Firebase": {
+        "text": "rose-300",
+        "bg": "rose-500",
+        "level": "Intermediate",
+        "exp": "+2",
+        "desc": "Backend-as-a-service platform with hosting, authentication, and databases.",
+        "tags": [
+            "Backend"
+        ]
+    },
+    "Python": {
+        "text": "sky-300",
+        "bg": "sky-500",
+        "level": "Intermediate",
+        "exp": "+3",
+        "desc": "High-level general-purpose language popular in scripting, AI, and data science.",
+        "tags": [
+            "Backend"
+        ]
+    },
+    "Java": {
+        "text": "red-300",
+        "bg": "red-500",
+        "level": "Beginner",
+        "exp": "1",
+        "desc": "Object-oriented programming language widely used for enterprise and Android apps.",
+        "tags": [
+            "Backend"
+        ]
+    },
+    "Swift": {
+        "text": "orange-200",
+        "bg": "orange-400",
+        "level": "Beginner",
+        "exp": "< 1",
+        "desc": "Modern programming language for iOS and macOS app development.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "Python Packaging (Poetry)": {
+        "text": "emerald-300",
+        "bg": "emerald-500",
+        "level": "Intermediate",
+        "exp": "+2",
+        "desc": "Dependency management and packaging tool for Python projects.",
+        "tags": [
+            "Backend"
+        ]
+    },
+    "SwiftUI": {
+        "text": "indigo-300",
+        "bg": "indigo-500",
+        "level": "Beginner",
+        "exp": "< 1",
+        "desc": "Apple's declarative framework for building iOS, macOS, and watchOS UIs.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "React": {
+        "text": "teal-300",
+        "bg": "teal-500",
+        "level": "Beginner",
+        "exp": "< 1",
+        "desc": "JavaScript library for building user interfaces with components.",
+        "tags": [
+            "Frontend"
+        ]
+    },
+    "JSON": {
+        "text": "amber-300",
+        "bg": "amber-500",
+        "level": "Expert",
+        "exp": "+4",
+        "desc": "Lightweight data-interchange format widely used for APIs and configuration.",
+        "tags": [
+            "Frontend",
+            "Backend"
+        ]
+    },
+    "Markdown": {
+        "text": "gray-500",
+        "bg": "gray-700",
+        "level": "Intermediate",
+        "exp": "+4",
+        "desc": "Plain-text formatting syntax commonly used for documentation and content.",
+        "tags": [
+            "Frontend",
+            "Backend"
+        ]
+    },
+    "VSCode": {
+        "text": "blue-500",
+        "bg": "blue-600",
+        "level": "Expert",
+        "exp": "+4",
+        "desc": "My main code editor, fully customized with extensions and shortcuts for efficient development.",
+        "tags": [
+            "Workflow"
+        ]
+    },
+    "Github": {
+        "text": "gray-200",
+        "bg": "black",
+        "level": "Intermediate",
+        "exp": "+4",
+        "desc": "Version control and collaboration platform — used daily for managing projects and codebases.",
+        "tags": [
+            "Workflow"
+        ]
+    },
+    "NPM": {
+        "text": "red-600",
+        "bg": "red-700",
+        "level": "Intermediate",
+        "exp": "+3",
+        "desc": "Package manager for JavaScript, managing dependencies and running scripts seamlessly.",
+        "tags": [
+            "Workflow"
+        ]
+    },
+    "Backend": {
+        "text": "green-300",
+        "bg": "green-500"
+    },
+    "Frontend": {
+        "text": "blue-300",
+        "bg": "blue-500"
+    },
+    "Workflow": {
+        "text": "yellow-300",
+        "bg": "yellow-500"
+    },
+    "Other": {
+        "text": "gray-400",
+        "bg": "gray-600"
+    }
+}
