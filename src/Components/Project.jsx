@@ -38,7 +38,7 @@ export default function Project({ id, landscape = false, large = false }) {
 						<a href={data.web} target="_blank">
 							<img
 								className="badge"
-								src="https://badgelab.dev/api/customBadge?name=Website&bgColor=4097ce&textColor=ffffff"
+								src="https://badgelab.dev/api/customBadge/Website?bg_color=4097ce&text_color=ffffff&no_logo=true"
 							/>
 						</a>
 					) : null}

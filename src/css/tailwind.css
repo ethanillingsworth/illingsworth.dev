@@ -248,4 +248,48 @@
 	p a {
 		@apply text-forge-accent hover:underline;
 	}
+
+	.my-life-in-code {
+		@apply p-20 font-["Courier_New"] flex flex-col text-forge-text!;
+
+		h1 {
+			@apply text-4xl;
+		}
+
+		h2 {
+			@apply mb-5;
+		}
+
+		section > h3 {
+			@apply my-5 mt-10 text-lg;
+		}
+
+		p {
+			@apply text-forge-text;
+		}
+
+		section {
+			@apply flex-col flex;
+		}
+
+		section.quote {
+			@apply my-20 place-items-end w-fit place-self-center;
+		}
+
+		section {
+			@apply my-10;
+		}
+
+		blockquote {
+			@apply text-4xl font-semibold;
+		}
+
+		cite {
+			@apply text-xl;
+		}
+
+		a {
+			@apply text-forge-accent hover:underline;
+		}
+	}
 }
