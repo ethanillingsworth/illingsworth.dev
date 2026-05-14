@@ -1,4 +1,19 @@
 {
-	"css.lint.unknownAtRules": "ignore",
-	"cSpell.words": ["badgelab", "codingrat", "funsies", "lokal", "syntaxforge"]
+    "css.lint.unknownAtRules": "ignore",
+    "cSpell.words": [
+        "Aiden",
+        "badgelab",
+        "Boyana",
+        "codingrat",
+        "funsies",
+        "Gabi",
+        "Gronski",
+        "Illingsworth",
+        "lokal",
+        "Michon",
+        "Miko",
+        "Mikolaj",
+        "Rundeva",
+        "syntaxforge"
+    ]
 }
