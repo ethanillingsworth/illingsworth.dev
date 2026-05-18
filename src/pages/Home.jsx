@@ -42,13 +42,13 @@ export default function Home() {
 						<a href="https://linkedin.com/in/ethanillingsworth">
 							<img
 								className="badge"
-								src="https://badgelab.dev/api/badge/linkedin-white"
+								src="https://badgelab.dev/api/badge/linkedin?style=mono"
 							/>
 						</a>
 						<a href="mailto:illingsworth.ethan@gmail.com">
 							<img
 								className="badge"
-								src="https://badgelab.dev/api/badge/gmail-white"
+								src="https://badgelab.dev/api/badge/gmail?style=mono"
 							/>
 						</a>
 					</div>
