@@ -62,14 +62,19 @@ export default function MyLifeInCode() {
                         A life represented as functions, variables, and data.
                     </span>
                 </div>
-                <span className="ml-auto">
+                <span className="ml-auto inline-flex gap-2">
                     An experience by
                     <EthanBadge />
                 </span>
             </div>
 
             <section>
-                <h2>Hello World, I am...</h2>
+                <h2>
+                    Hello World, I am...
+                    <audio controls>
+                        <source src="/my-life-in-code/audio/hello_world.mp3"></source>
+                    </audio>
+                </h2>
                 <EthanBadge />
 
                 <p>
@@ -91,7 +96,12 @@ export default function MyLifeInCode() {
             </section>
 
             <section>
-                <h2>My Story</h2>
+                <h2>
+                    My Story
+                    <audio controls>
+                        <source src="/my-life-in-code/audio/my_story.mp3"></source>
+                    </audio>
+                </h2>
 
                 <EthanBadge></EthanBadge>
                 <p>
@@ -105,7 +115,12 @@ export default function MyLifeInCode() {
                     where it all began.
                 </p>
 
-                <h3>Intro to CS and AP CSP | Freshman Year</h3>
+                <h3>
+                    Intro to CS and AP CSP | Freshman Year
+                    <audio controls>
+                        <source src="/my-life-in-code/audio/freshman.mp3"></source>
+                    </audio>
+                </h3>
 
                 <EthanBadge></EthanBadge>
                 <div className="flex flex-row w-full gap-10">
@@ -174,6 +189,9 @@ export default function MyLifeInCode() {
 
                 <h3>
                     Entrepreneurship (Incubator) and AP CSA | Sophomore Year
+                    <audio controls>
+                        <source src="/my-life-in-code/audio/soph.mp3"></source>
+                    </audio>
                 </h3>
                 <EthanBadge></EthanBadge>
                 <div className="flex flex-row w-full gap-10">
@@ -240,15 +258,15 @@ export default function MyLifeInCode() {
                         />
                     </div>
                 </div>
-
-                <h3>Today | Junior Year</h3>
-
-                <EthanBadge></EthanBadge>
-                <p></p>
             </section>
 
             <section>
-                <h2>My Projects</h2>
+                <h2>
+                    My Projects
+                    <audio controls>
+                        <source src="/my-life-in-code/audio/projects.mp3"></source>
+                    </audio>
+                </h2>
 
                 <EthanBadge></EthanBadge>
 
@@ -286,6 +304,12 @@ export default function MyLifeInCode() {
                     <a href="https://en.wikipedia.org/wiki/Kent_Beck">
                         Kent Beck
                     </a>
+                    <audio controls>
+                        <source
+                            src="/my-life-in-code/audio/beck.mp3"
+                            type="audio/mpeg"
+                        ></source>
+                    </audio>
                 </cite>
             </section>
         </div>

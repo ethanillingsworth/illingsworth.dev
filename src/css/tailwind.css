@@ -257,11 +257,11 @@
 		}
 
 		h2 {
-			@apply mb-5;
+			@apply mb-5 inline-flex;
 		}
 
 		section > h3 {
-			@apply my-5 mt-10 text-lg;
+			@apply my-5 mt-10 text-lg inline-flex;
 		}
 
 		p {
@@ -290,6 +290,10 @@
 
 		a {
 			@apply text-forge-accent hover:underline;
+		}
+
+		audio {
+			@apply ml-auto
 		}
 	}
 }
